@@ -60,7 +60,9 @@ namespace ExperimentOnly
 
         private void Admin_Click(object sender, EventArgs e)
         {
-
+            LogDetails f2 = new LogDetails();
+            f2.Show();
+            this.Hide();
         }
     }
 }

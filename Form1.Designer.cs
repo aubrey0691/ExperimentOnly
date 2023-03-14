@@ -32,6 +32,7 @@
             this.Intern = new System.Windows.Forms.Button();
             this.Guest = new System.Windows.Forms.Button();
             this.Admin = new System.Windows.Forms.Button();
+            this.WelcomeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Intern
@@ -40,7 +41,7 @@
             this.Intern.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Intern.BackgroundImage")));
             this.Intern.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Intern.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Intern.Font = new System.Drawing.Font("Montserrat Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intern.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intern.ForeColor = System.Drawing.SystemColors.Window;
             this.Intern.Location = new System.Drawing.Point(172, 354);
             this.Intern.Name = "Intern";
@@ -55,7 +56,7 @@
             this.Guest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Guest.BackgroundImage")));
             this.Guest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Guest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guest.Font = new System.Drawing.Font("Montserrat Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guest.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guest.ForeColor = System.Drawing.SystemColors.Window;
             this.Guest.Location = new System.Drawing.Point(172, 444);
             this.Guest.Name = "Guest";
@@ -70,7 +71,7 @@
             this.Admin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Admin.BackgroundImage")));
             this.Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Admin.Font = new System.Drawing.Font("Montserrat Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.SystemColors.Window;
             this.Admin.Location = new System.Drawing.Point(172, 535);
             this.Admin.Name = "Admin";
@@ -78,6 +79,19 @@
             this.Admin.TabIndex = 2;
             this.Admin.UseVisualStyleBackColor = false;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
+            // 
+            // WelcomeLabel
+            // 
+            this.WelcomeLabel.AutoSize = true;
+            this.WelcomeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WelcomeLabel.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
+            this.WelcomeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.WelcomeLabel.Location = new System.Drawing.Point(191, 82);
+            this.WelcomeLabel.Name = "WelcomeLabel";
+            this.WelcomeLabel.Size = new System.Drawing.Size(348, 77);
+            this.WelcomeLabel.TabIndex = 12;
+            this.WelcomeLabel.Text = "Welcome!";
+            this.WelcomeLabel.Click += new System.EventHandler(this.LogbookFormLabel_Click);
             // 
             // LandingPage
             // 
@@ -87,6 +101,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
+            this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.Guest);
             this.Controls.Add(this.Intern);
@@ -97,6 +112,7 @@
             this.Text = "LandingPage";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,6 +121,7 @@
         private System.Windows.Forms.Button Intern;
         private System.Windows.Forms.Button Guest;
         private System.Windows.Forms.Button Admin;
+        private System.Windows.Forms.Label WelcomeLabel;
     }
 }
 

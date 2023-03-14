@@ -38,14 +38,15 @@
             this.Purpose = new System.Windows.Forms.TextBox();
             this.FirstNamebox = new System.Windows.Forms.TextBox();
             this.LastNamebox = new System.Windows.Forms.TextBox();
-            this.LogBookIcon = new System.Windows.Forms.PictureBox();
+            this.HomeButton = new System.Windows.Forms.Button();
+            this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.GroupLogDeets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogBookIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupLogDeets
             // 
             this.GroupLogDeets.BackColor = System.Drawing.Color.Transparent;
+            this.GroupLogDeets.Controls.Add(this.HomeButton);
             this.GroupLogDeets.Controls.Add(this.SubmitButton);
             this.GroupLogDeets.Controls.Add(this.Affiliationbox);
             this.GroupLogDeets.Controls.Add(this.EmailAddbox);
@@ -63,7 +64,9 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.Location = new System.Drawing.Point(176, 186);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
@@ -144,16 +147,30 @@
             this.LastNamebox.Text = "Last Name";
             this.LastNamebox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
             // 
-            // LogBookIcon
+            // HomeButton
             // 
-            this.LogBookIcon.BackColor = System.Drawing.Color.Transparent;
-            this.LogBookIcon.Image = ((System.Drawing.Image)(resources.GetObject("LogBookIcon.Image")));
-            this.LogBookIcon.Location = new System.Drawing.Point(197, 81);
-            this.LogBookIcon.Name = "LogBookIcon";
-            this.LogBookIcon.Size = new System.Drawing.Size(374, 110);
-            this.LogBookIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LogBookIcon.TabIndex = 1;
-            this.LogBookIcon.TabStop = false;
+            this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeButton.Location = new System.Drawing.Point(6, 245);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(37, 23);
+            this.HomeButton.TabIndex = 10;
+            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // LogbookFormLabel
+            // 
+            this.LogbookFormLabel.AutoSize = true;
+            this.LogbookFormLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LogbookFormLabel.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
+            this.LogbookFormLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogbookFormLabel.Location = new System.Drawing.Point(210, 37);
+            this.LogbookFormLabel.Name = "LogbookFormLabel";
+            this.LogbookFormLabel.Size = new System.Drawing.Size(323, 154);
+            this.LogbookFormLabel.TabIndex = 11;
+            this.LogbookFormLabel.Text = "Logbook \r\nForm";
+            this.LogbookFormLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // LogDetails
             // 
@@ -162,7 +179,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
-            this.Controls.Add(this.LogBookIcon);
+            this.Controls.Add(this.LogbookFormLabel);
             this.Controls.Add(this.GroupLogDeets);
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1240, 720);
@@ -172,8 +189,8 @@
             this.Load += new System.EventHandler(this.LogDetails_Load);
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogBookIcon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -188,6 +205,7 @@
         private System.Windows.Forms.TextBox Affiliationbox;
         private System.Windows.Forms.TextBox EmailAddbox;
         private System.Windows.Forms.Button SubmitButton;
-        private System.Windows.Forms.PictureBox LogBookIcon;
+        private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.Label LogbookFormLabel;
     }
 }

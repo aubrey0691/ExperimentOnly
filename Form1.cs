@@ -60,9 +60,14 @@ namespace ExperimentOnly
 
         private void Admin_Click(object sender, EventArgs e)
         {
-            LogDetails f2 = new LogDetails();
-            f2.Show();
+            AdminLogin f3 = new AdminLogin();
+            f3.Show();
             this.Hide();
+        }
+
+        private void LogbookFormLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

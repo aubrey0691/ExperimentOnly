@@ -48,5 +48,17 @@ namespace ExperimentOnly
         {
 
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            LandingPage f1 = new LandingPage();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

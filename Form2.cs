@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ExperimentOnly
 {
@@ -40,7 +41,20 @@ namespace ExperimentOnly
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             //Log Book Page (form 2) closes and details are recorded in the database.
-            
+            string connetionString = null;
+            MySqlConnection cnn;
+            connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3306;";
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                MessageBox.Show("Connection Open ! ");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
+            }
 
         }
 

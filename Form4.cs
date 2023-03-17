@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExperimentOnly
 {
-    public partial class Form4 : Form
+    public partial class Database : Form
     {
-        public Form4()
+        public Database()
         {
             InitializeComponent();
         }

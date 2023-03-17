@@ -1,6 +1,6 @@
 ﻿namespace ExperimentOnly
 {
-    partial class Form4
+    partial class Database
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Database
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form4";
+            this.ClientSize = new System.Drawing.Size(1224, 681);
+            this.MaximumSize = new System.Drawing.Size(1240, 720);
+            this.MinimumSize = new System.Drawing.Size(1240, 720);
+            this.Name = "Database";
+            this.Text = "Database";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

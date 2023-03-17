@@ -120,19 +120,18 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HomeButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAEFSURBVEhL7ZVBFYQwDESRsBKQgAQkIGFvXFcCUpCABCSs
-        FBx0Z3gNBJguhTOH/x6dZBLa5kERQsiibdsX6ECl4imkuIdFwRdMkVrlKaToicVZdAC2iwDeKn+PFA0W
-        icX6HF0hRQLz3zeFvtmZyiFShKGP5kbFDcRLwLshpcrZLJDEM7bLzJqW6BlTHp9ok0KSW04Bj+16c6QW
-        zDrPM1gc8N4607x4OhE5oE4D+LJzPQrzpMTA0vkO8PPSeQo8Ed5L5YMcy9EbrgJ/DfC4aj4oG0D70CRQ
-        ubcaHHSsWehpkNaxfhqsKB3rWw1S804Gb8J6LpRg8rnLA0GQRsXhAyhyDPdfCMUPsGRaY06DySMAAAAA
-        SUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAQVJREFUSEvtlUEVhDAMRJGwEpCABCQgYW9cVwJSkIAEJKwUHHRneA0EmC6FM4f/
+        Hp1kEtrmQRFCyKJt2xfoQKXiKaS4h0XBF0yRWuUppOiJxVl0ALaLAN4qf48UDRaJxfocXSFFAvPfN4W+
+        2ZnKIVKEoY/mRsUNxEvAuyGlytkskMQztsvMmpboGVMen2iTQpJbTgGP7XpzpBbMOs8zWBzw3jrTvHg6
+        ETmgTgP4snM9CvOkxMDS+Q7w89J5CjwR3kvlgxzL0RuuAn8N8LhqPigbQPvQJFC5txocdKxZ6GmQ1rF+
+        GqwoHetbDVLzTgZvwnoulGDyucsDQZBGxeEDKHIM918IxQ+wZFpjToPJIwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB4UAAAQ4CAYAAAAO+goHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7s/XV0XVtj3vvfP5KO3nt//eUcW7LMzMwgZmZmZskgsNAsS2aWmZmZ
+        DAAACwwBP0AiyAAA/7JJREFUeF7s/XV0XVtj3vvfP5KO3nt//eUcW7LMzMwgZmZmZskgsNAsS2aWmZmZ
         +djHzHTgfZM3adImaZqkaQNN2qZ97ppTWst7Scu2ZEvy9t6PxvgMWYu1tuxzvL+ec/1fADS/PysGRERE
         RERERERERERERET07VM7MKMwEREREREREREREREREZEFUjswozARERERERERERERERERkQVSOzCjMBER
         ERERERERERERERGRBVI7MKMwEREREREREREREREREZEFUjswozARERERERERERERERERkQVSOzCjMBER

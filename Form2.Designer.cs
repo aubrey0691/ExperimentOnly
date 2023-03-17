@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogDetails));
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
+            this.Clear = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Affiliationbox = new System.Windows.Forms.TextBox();
             this.EmailAddbox = new System.Windows.Forms.TextBox();
             this.TimeOut = new System.Windows.Forms.RadioButton();
             this.TimeIn = new System.Windows.Forms.RadioButton();
-            this.Purpose = new System.Windows.Forms.TextBox();
+            this.Purposebox = new System.Windows.Forms.TextBox();
             this.FirstNamebox = new System.Windows.Forms.TextBox();
             this.LastNamebox = new System.Windows.Forms.TextBox();
-            this.HomeButton = new System.Windows.Forms.Button();
             this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.GroupLogDeets.SuspendLayout();
             this.SuspendLayout();
@@ -46,13 +47,14 @@
             // GroupLogDeets
             // 
             this.GroupLogDeets.BackColor = System.Drawing.Color.Transparent;
+            this.GroupLogDeets.Controls.Add(this.Clear);
             this.GroupLogDeets.Controls.Add(this.HomeButton);
             this.GroupLogDeets.Controls.Add(this.SubmitButton);
             this.GroupLogDeets.Controls.Add(this.Affiliationbox);
             this.GroupLogDeets.Controls.Add(this.EmailAddbox);
             this.GroupLogDeets.Controls.Add(this.TimeOut);
             this.GroupLogDeets.Controls.Add(this.TimeIn);
-            this.GroupLogDeets.Controls.Add(this.Purpose);
+            this.GroupLogDeets.Controls.Add(this.Purposebox);
             this.GroupLogDeets.Controls.Add(this.FirstNamebox);
             this.GroupLogDeets.Controls.Add(this.LastNamebox);
             this.GroupLogDeets.Location = new System.Drawing.Point(95, 347);
@@ -62,14 +64,39 @@
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(128, 186);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(89, 28);
+            this.Clear.TabIndex = 11;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeButton.Location = new System.Drawing.Point(0, 251);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(27, 23);
+            this.HomeButton.TabIndex = 10;
+            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
             // SubmitButton
             // 
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(176, 186);
+            this.SubmitButton.Location = new System.Drawing.Point(249, 186);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(118, 42);
+            this.SubmitButton.Size = new System.Drawing.Size(89, 28);
             this.SubmitButton.TabIndex = 9;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -83,7 +110,7 @@
             this.Affiliationbox.Size = new System.Drawing.Size(369, 26);
             this.Affiliationbox.TabIndex = 7;
             this.Affiliationbox.Text = "Affiliation";
-            this.Affiliationbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Affiliationbox.TextChanged += new System.EventHandler(this.Affiliationbox_TextChanged);
             // 
             // EmailAddbox
             // 
@@ -93,6 +120,7 @@
             this.EmailAddbox.Size = new System.Drawing.Size(369, 26);
             this.EmailAddbox.TabIndex = 5;
             this.EmailAddbox.Text = "E-mail Address";
+            this.EmailAddbox.TextChanged += new System.EventHandler(this.EmailAddbox_TextChanged);
             // 
             // TimeOut
             // 
@@ -118,15 +146,15 @@
             this.TimeIn.Text = "Time In";
             this.TimeIn.UseVisualStyleBackColor = true;
             // 
-            // Purpose
+            // Purposebox
             // 
-            this.Purpose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Purpose.Location = new System.Drawing.Point(52, 51);
-            this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(369, 26);
-            this.Purpose.TabIndex = 2;
-            this.Purpose.Text = "Purpose";
-            this.Purpose.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Purposebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Purposebox.Location = new System.Drawing.Point(52, 51);
+            this.Purposebox.Name = "Purposebox";
+            this.Purposebox.Size = new System.Drawing.Size(369, 26);
+            this.Purposebox.TabIndex = 2;
+            this.Purposebox.Text = "Purpose";
+            this.Purposebox.TextChanged += new System.EventHandler(this.Purposebox_TextChanged);
             // 
             // FirstNamebox
             // 
@@ -136,6 +164,7 @@
             this.FirstNamebox.Size = new System.Drawing.Size(172, 26);
             this.FirstNamebox.TabIndex = 1;
             this.FirstNamebox.Text = "First Name";
+            this.FirstNamebox.TextChanged += new System.EventHandler(this.FirstNamebox_TextChanged);
             // 
             // LastNamebox
             // 
@@ -146,18 +175,6 @@
             this.LastNamebox.TabIndex = 0;
             this.LastNamebox.Text = "Last Name";
             this.LastNamebox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
-            // 
-            // HomeButton
-            // 
-            this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
-            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HomeButton.Location = new System.Drawing.Point(6, 245);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(37, 23);
-            this.HomeButton.TabIndex = 10;
-            this.HomeButton.UseVisualStyleBackColor = true;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // LogbookFormLabel
             // 
@@ -170,7 +187,7 @@
             this.LogbookFormLabel.Size = new System.Drawing.Size(323, 154);
             this.LogbookFormLabel.TabIndex = 11;
             this.LogbookFormLabel.Text = "Logbook \r\nForm";
-            this.LogbookFormLabel.Click += new System.EventHandler(this.label1_Click);
+            this.LogbookFormLabel.Click += new System.EventHandler(this.LogbookFormlabel_Click);
             // 
             // LogDetails
             // 
@@ -199,7 +216,7 @@
         private System.Windows.Forms.GroupBox GroupLogDeets;
         private System.Windows.Forms.TextBox FirstNamebox;
         private System.Windows.Forms.TextBox LastNamebox;
-        private System.Windows.Forms.TextBox Purpose;
+        private System.Windows.Forms.TextBox Purposebox;
         private System.Windows.Forms.RadioButton TimeOut;
         private System.Windows.Forms.RadioButton TimeIn;
         private System.Windows.Forms.TextBox Affiliationbox;
@@ -207,5 +224,6 @@
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Label LogbookFormLabel;
+        private System.Windows.Forms.Button Clear;
     }
 }

@@ -35,6 +35,20 @@ namespace ExperimentOnly
             f2.Show();
             this.Hide();
         }
+
+        private void Passwordbox_TextChanged(object sender, EventArgs e)
+        {
+            Passwordbox.Text = String.Empty;
+            if (string.IsNullOrWhiteSpace(this.txtPassword.Text))
+            {
+                MessageBox.Show("Please Enter A Password","Required", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

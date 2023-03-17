@@ -20,22 +20,22 @@ namespace ExperimentOnly
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            //group box container
         }
 
         private void LastNamebox_TextChanged(object sender, EventArgs e)
         {
-
+            LastNamebox.Text = String.Empty;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Purposebox_TextChanged(object sender, EventArgs e)
         {
-
+            Purposebox.Text = String.Empty;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Affiliationbox_TextChanged(object sender, EventArgs e)
         {
-
+            Affiliationbox.Text = String.Empty;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -70,9 +70,28 @@ namespace ExperimentOnly
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void LogbookFormlabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FirstNamebox_TextChanged(object sender, EventArgs e)
+        {
+            FirstNamebox.Text = String.Empty;
+        }
+
+        private void EmailAddbox_TextChanged(object sender, EventArgs e)
+        {
+            EmailAddbox.Text = String.Empty;
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            LastNamebox.Clear();
+            FirstNamebox.Clear();
+            Purposebox.Clear();
+            Affiliationbox.Clear();
+            EmailAddbox.Clear();
         }
     }
 }

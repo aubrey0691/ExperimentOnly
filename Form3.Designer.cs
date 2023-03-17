@@ -35,6 +35,7 @@
             this.HomeButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Passwordbox = new System.Windows.Forms.TextBox();
+            this.Clear = new System.Windows.Forms.Button();
             this.GroupLogDeets.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             // GroupLogDeets
             // 
             this.GroupLogDeets.BackColor = System.Drawing.Color.Transparent;
+            this.GroupLogDeets.Controls.Add(this.Clear);
             this.GroupLogDeets.Controls.Add(this.AdminLabel);
             this.GroupLogDeets.Controls.Add(this.HomeButton);
             this.GroupLogDeets.Controls.Add(this.SubmitButton);
@@ -81,9 +83,9 @@
             this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
             this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HomeButton.Location = new System.Drawing.Point(6, 245);
+            this.HomeButton.Location = new System.Drawing.Point(0, 248);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(37, 23);
+            this.HomeButton.Size = new System.Drawing.Size(28, 26);
             this.HomeButton.TabIndex = 10;
             this.HomeButton.UseVisualStyleBackColor = true;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
@@ -93,7 +95,7 @@
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(171, 133);
+            this.SubmitButton.Location = new System.Drawing.Point(249, 133);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
             this.SubmitButton.TabIndex = 9;
@@ -109,6 +111,20 @@
             this.Passwordbox.Size = new System.Drawing.Size(369, 26);
             this.Passwordbox.TabIndex = 7;
             this.Passwordbox.Text = "Password";
+            this.Passwordbox.TextChanged += new System.EventHandler(this.Passwordbox_TextChanged);
+            // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(91, 133);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(118, 42);
+            this.Clear.TabIndex = 11;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdminLogin
             // 
@@ -139,5 +155,6 @@
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.TextBox Passwordbox;
         private System.Windows.Forms.Label AdminLabel;
+        private System.Windows.Forms.Button Clear;
     }
 }

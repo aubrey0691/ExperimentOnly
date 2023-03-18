@@ -55,7 +55,7 @@ namespace ExperimentOnly
             {
                 MessageBox.Show("Can not open connection ! ");
             }
-
+            
         }
 
         private void LogDetails_Load(object sender, EventArgs e)

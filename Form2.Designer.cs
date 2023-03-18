@@ -133,6 +133,7 @@
             this.TimeOut.TabStop = true;
             this.TimeOut.Text = "Time Out";
             this.TimeOut.UseVisualStyleBackColor = true;
+            this.TimeOut.CheckedChanged += new System.EventHandler(this.TimeOut_CheckedChanged);
             // 
             // TimeIn
             // 

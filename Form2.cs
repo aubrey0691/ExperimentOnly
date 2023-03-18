@@ -43,7 +43,7 @@ namespace ExperimentOnly
             //Log Book Page (form 2) closes and details are recorded in the database.
             string connetionString = null;
             MySqlConnection cnn;
-            connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3306;";
+            connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3307;";
             cnn = new MySqlConnection(connetionString);
             try
             {
@@ -92,6 +92,11 @@ namespace ExperimentOnly
             Purposebox.Clear();
             Affiliationbox.Clear();
             EmailAddbox.Clear();
+        }
+
+        private void TimeOut_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

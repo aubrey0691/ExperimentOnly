@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ExperimentOnly
 {
-    public partial class Database : Form
+    public partial class LogbookDataB : Form
     {
-        public Database()
+        public LogbookDataB()
         {
             InitializeComponent();
+        }
+
+        private void Database_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

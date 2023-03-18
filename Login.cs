@@ -1,8 +1,8 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
 using System.Data;
-
+using System.Data.SqlClient;
 public class Login
 {
     DataSet ds;
@@ -10,31 +10,13 @@ public class Login
     {
         ds = new DataSet(); 
     }
-    
-
+ 
     public string QueryScalar(string Query)
     {
         string str;
         MySqlConnection mySqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConString"].ToString());
         MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
         mySqlConnection.Open();
-        try
-        {
-            try
-            {
-                str = mySqlCommand.ExecuteScalar().ToString();
-            }
-            finally
-            {
-                mySqlCommand.Dispose();
-                mySqlConnection.Close();
-                mySqlConnection.Dispose();
-            }
-        }
-        catch (Exception ex)
-        {
-            throw ex;
-        }
-        return str;
+        
     }
-}
+}*/

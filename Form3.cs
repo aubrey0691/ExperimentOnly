@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using XAct.Library.Settings;
+using System.Data.SqlClient;
 namespace ExperimentOnly
 {
+    
+    
     public partial class AdminLogin : Form
     {
+        
         public AdminLogin()
         {
             InitializeComponent();
@@ -30,19 +34,16 @@ namespace ExperimentOnly
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            LogDetails f2 = new LogDetails();
-            f2.Show();
+        { 
+           
+            LogbookDataB ldb = new LogbookDataB();
+            ldb.Show();
             this.Hide();
         }
 
         private void Passwordbox_TextChanged(object sender, EventArgs e)
         {
-            Passwordbox.Text = String.Empty;
-            if (string.IsNullOrWhiteSpace(this.txtPassword.Text))
-            {
-                MessageBox.Show("Please Enter A Password","Required", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

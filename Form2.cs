@@ -25,7 +25,7 @@ namespace ExperimentOnly
 
         private void LastNamebox_TextChanged(object sender, EventArgs e)
         {
-            LastNamebox.Text = String.Empty;
+            MiddleInitialbox.Text = String.Empty;
         }
 
         private void Purposebox_TextChanged(object sender, EventArgs e)
@@ -87,14 +87,36 @@ namespace ExperimentOnly
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            LastNamebox.Clear();
+            Honorificsbox.Clear();
             FirstNamebox.Clear();
+            MiddleInitialbox.Clear();
+            LastNamebox.Clear();
             Purposebox.Clear();
             Affiliationbox.Clear();
             EmailAddbox.Clear();
         }
 
         private void TimeOut_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeIn_CheckedChanged(object sender, EventArgs e)
         {
 
         }

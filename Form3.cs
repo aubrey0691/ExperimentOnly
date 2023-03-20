@@ -12,6 +12,8 @@ using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MySqlX.XDevAPI;
+using System.Xml.Linq;
+
 
 
 namespace ExperimentOnly
@@ -20,11 +22,14 @@ namespace ExperimentOnly
     
     public partial class AdminLogin : Form
     {
-        
+        Datalayer dl;
         public AdminLogin()
         {
+            dl = new Datalayer();
             InitializeComponent();
         }
+
+        string cs = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\login;Host = localhost; Database = LogDB; Username = postgres; Password = ***********; Persist Security Info = True;";
 
         private void GroupLogDeets_Enter(object sender, EventArgs e)
         {
@@ -33,92 +38,101 @@ namespace ExperimentOnly
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            LogDetails f2 = new LogDetails();
-            f2.Show();
+            LandingPage f1 = new LandingPage();
+            f1.Show();
             this.Hide();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            runQuery();
+            if (Passwordbox.Text == "")
+            {
+                MessageBox.Show("Please provide UserName and Password");
+                return;
+            }
+            try
+            {
+                //Create SqlConnection
+                SqlConnection con = new SqlConnection(cs);
+                SqlCommand cmd = new SqlCommand("Select * from users where password=@password", con);
+                
+                cmd.Parameters.AddWithValue("@password", Passwordbox.Text);
+                con.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                con.Close();
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
+                {
+                    MessageBox.Show("Login Successful!");
+                    this.Hide();
+                    LogbookDataB fm = new LogbookDataB();
+                    fm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Login Failed!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source='DESKTOP-43E8BUQ;Initial Catalog=login;Integrated Security=True");
+            con.Open();
         }
 
         private void runQuery()
         {
-            string query = Passwordbox.Text;
-            if (query == "")
+            string s_id;
+
+            string qry = "select id# AND username from public.users where password='" + Passwordbox.Text + "'";
+
+            dl.getsingleColumnValueByIndex(qry, out s_id, 0);
+
+            if (s_id != null)
             {
-                MessageBox.Show("Please Enter A Password!");
-                return;
+
+                LogbookDataB sd = new LogbookDataB();
+
+                sd.Show();
+
             }
 
-            /*string connectionString = "server=127.0.0.1;database=login;uid=root;port=3307";
-            var providerName = "System.Data.SqlClient";*/
-            SqlConnection con = new SqlConnection(@"server=127.0.0.1;database=login;uid=root;Protocol=pipe;PipeName=mypipename;"); // making connection 
-
-            /*// Prepare the connection
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;*/
-
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM login WHERE password='" + Passwordbox.Text + "'", con);
-            /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
-            DataTable dt = new DataTable(); //this is creating a virtual table  
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
-            {
-                /* I have made a new page called home page. If the user is successfully authenticated then the form will be moved to the next form */
-                this.Hide();
-                new LogbookDataB().Show();
-            }
             else
-                MessageBox.Show("Invalid username or password");
+
+            {
+
+                MessageBox.Show("Password Doesn't Match Please Try Again !", "Error"
+
+                , MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
-        /* try
-         {
-             // Open the database
-             databaseConnection.Open();
-
-             // Execute the query
-             reader = commandDatabase.ExecuteReader();
-
-             // All succesfully executed, now do something
-
-             // IMPORTANT : 
-             // If your query returns result, use the following processor :
-
-             if (reader.HasRows)
-             {
-                 while (reader.Read())
-                 {
-                     // As our database, the array will contain : ID 0, FIRST_NAME 1,LAST_NAME 2, ADDRESS 3
-                     // Do something with every received database ROW
-                     string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3) };
-                 }
-             }
-             else
-             {
-                 Console.WriteLine("No rows found.");
-             }
-
-             // Finally close the connection
-             databaseConnection.Close();
-         }
-         catch (Exception ex)
-         {
-             // Show any error message.
-             MessageBox.Show(ex.Message);
-         }
-     }*/
-
+        
         private void Passwordbox_TextChanged(object sender, EventArgs e)
         {
             
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Passwordbox.Clear();
+        }
+
+        private void Usernamebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminLabel_Click(object sender, EventArgs e)
         {
 
         }

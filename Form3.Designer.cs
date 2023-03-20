@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
+            this.Clear = new System.Windows.Forms.Button();
             this.AdminLabel = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Passwordbox = new System.Windows.Forms.TextBox();
-            this.Clear = new System.Windows.Forms.Button();
             this.GroupLogDeets.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,17 +66,31 @@
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.GroupLogDeets_Enter);
             // 
+            // Clear
+            // 
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(91, 133);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(118, 42);
+            this.Clear.TabIndex = 11;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AdminLabel
             // 
             this.AdminLabel.AutoSize = true;
             this.AdminLabel.BackColor = System.Drawing.Color.Transparent;
             this.AdminLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLabel.ForeColor = System.Drawing.Color.Black;
-            this.AdminLabel.Location = new System.Drawing.Point(170, 38);
+            this.AdminLabel.Location = new System.Drawing.Point(167, 30);
             this.AdminLabel.Name = "AdminLabel";
             this.AdminLabel.Size = new System.Drawing.Size(128, 38);
             this.AdminLabel.TabIndex = 2;
             this.AdminLabel.Text = "Admin ";
+            this.AdminLabel.Click += new System.EventHandler(this.AdminLabel_Click);
             // 
             // HomeButton
             // 
@@ -112,19 +126,6 @@
             this.Passwordbox.TabIndex = 7;
             this.Passwordbox.Text = "Password";
             this.Passwordbox.TextChanged += new System.EventHandler(this.Passwordbox_TextChanged);
-            // 
-            // Clear
-            // 
-            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(91, 133);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(118, 42);
-            this.Clear.TabIndex = 11;
-            this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdminLogin
             // 

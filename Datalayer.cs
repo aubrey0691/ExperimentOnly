@@ -9,6 +9,7 @@ using Devart.Data.PostgreSql;
 using System.Configuration;
 using System.Windows.Forms;
 using System.Drawing;
+using Npgsql;
 
 namespace ExperimentOnly    
 {
@@ -46,6 +47,7 @@ namespace ExperimentOnly
         }
         public bool disconnect()
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 conn_.Clone();
@@ -55,6 +57,7 @@ namespace ExperimentOnly
             {
                 return false;
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         public string InsertUpdateDeleteCreate(string query)
         {
@@ -119,4 +122,5 @@ namespace ExperimentOnly
             return ret;
         }
     }
+    
 }

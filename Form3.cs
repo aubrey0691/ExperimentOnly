@@ -13,6 +13,8 @@ using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MySqlX.XDevAPI;
 using System.Xml.Linq;
+using Npgsql;
+using Devart.Data.PostgreSql;
 
 
 
@@ -29,7 +31,7 @@ namespace ExperimentOnly
             InitializeComponent();
         }
 
-        string cs = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\login;Host = localhost; Database = LogDB; Username = postgres; Password = ***********; Persist Security Info = True;";
+        string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
 
         private void GroupLogDeets_Enter(object sender, EventArgs e)
         {
@@ -53,12 +55,12 @@ namespace ExperimentOnly
             try
             {
                 //Create SqlConnection
-                SqlConnection con = new SqlConnection(cs);
-                SqlCommand cmd = new SqlCommand("Select * from users where password=@password", con);
+                PgSqlConnection con = new PgSqlConnection(cs);
+                PgSqlCommand cmd = new PgSqlCommand("Select * from users where password=@password", con);
                 
                 cmd.Parameters.AddWithValue("@password", Passwordbox.Text);
                 con.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 adapt.Fill(ds);
                 con.Close();
@@ -67,9 +69,9 @@ namespace ExperimentOnly
                 if (count == 1)
                 {
                     MessageBox.Show("Login Successful!");
-                    this.Hide();
                     LogbookDataB fm = new LogbookDataB();
                     fm.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -84,7 +86,7 @@ namespace ExperimentOnly
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source='DESKTOP-43E8BUQ;Initial Catalog=login;Integrated Security=True");
+            PgSqlConnection con = new PgSqlConnection("User Id=postgres;Database=login;Port=5432;Initial Schema=public;password=root;Initial Catalog=login;Integrated Security=True");
             con.Open();
         }
 
@@ -92,7 +94,7 @@ namespace ExperimentOnly
         {
             string s_id;
 
-            string qry = "select id# AND username from public.users where password='" + Passwordbox.Text + "'";
+            string qry = "select username from public.users where password = '" + Passwordbox.Text + "'";
 
             dl.getsingleColumnValueByIndex(qry, out s_id, 0);
 
@@ -102,7 +104,7 @@ namespace ExperimentOnly
                 LogbookDataB sd = new LogbookDataB();
 
                 sd.Show();
-
+                this.Hide();
             }
 
             else

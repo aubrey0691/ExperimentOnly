@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogDetails));
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
+            this.FirstNamebox = new System.Windows.Forms.TextBox();
+            this.Honorificsbox = new System.Windows.Forms.TextBox();
+            this.LastNamebox = new System.Windows.Forms.TextBox();
             this.Clear = new System.Windows.Forms.Button();
             this.HomeButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
@@ -40,10 +43,9 @@
             this.Purposebox = new System.Windows.Forms.TextBox();
             this.MiddleInitialbox = new System.Windows.Forms.TextBox();
             this.LogbookFormLabel = new System.Windows.Forms.Label();
-            this.LastNamebox = new System.Windows.Forms.TextBox();
-            this.Honorificsbox = new System.Windows.Forms.TextBox();
-            this.FirstNamebox = new System.Windows.Forms.TextBox();
+            this.radioboxgroup = new System.Windows.Forms.GroupBox();
             this.GroupLogDeets.SuspendLayout();
+            this.radioboxgroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupLogDeets
@@ -57,16 +59,45 @@
             this.GroupLogDeets.Controls.Add(this.SubmitButton);
             this.GroupLogDeets.Controls.Add(this.Affiliationbox);
             this.GroupLogDeets.Controls.Add(this.EmailAddbox);
-            this.GroupLogDeets.Controls.Add(this.TimeOut);
-            this.GroupLogDeets.Controls.Add(this.TimeIn);
             this.GroupLogDeets.Controls.Add(this.Purposebox);
             this.GroupLogDeets.Controls.Add(this.MiddleInitialbox);
+            this.GroupLogDeets.Controls.Add(this.radioboxgroup);
             this.GroupLogDeets.Location = new System.Drawing.Point(95, 350);
             this.GroupLogDeets.Name = "GroupLogDeets";
             this.GroupLogDeets.Size = new System.Drawing.Size(476, 271);
             this.GroupLogDeets.TabIndex = 0;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // FirstNamebox
+            // 
+            this.FirstNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNamebox.Location = new System.Drawing.Point(249, 17);
+            this.FirstNamebox.Name = "FirstNamebox";
+            this.FirstNamebox.Size = new System.Drawing.Size(165, 26);
+            this.FirstNamebox.TabIndex = 14;
+            this.FirstNamebox.Text = "First Name";
+            this.FirstNamebox.TextChanged += new System.EventHandler(this.FirstNamebox_TextChanged);
+            // 
+            // Honorificsbox
+            // 
+            this.Honorificsbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Honorificsbox.Location = new System.Drawing.Point(45, 17);
+            this.Honorificsbox.Name = "Honorificsbox";
+            this.Honorificsbox.Size = new System.Drawing.Size(165, 26);
+            this.Honorificsbox.TabIndex = 13;
+            this.Honorificsbox.Text = "Honorifics";
+            this.Honorificsbox.TextChanged += new System.EventHandler(this.Honorificsbox_TextChanged);
+            // 
+            // LastNamebox
+            // 
+            this.LastNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNamebox.Location = new System.Drawing.Point(249, 49);
+            this.LastNamebox.Name = "LastNamebox";
+            this.LastNamebox.Size = new System.Drawing.Size(165, 26);
+            this.LastNamebox.TabIndex = 12;
+            this.LastNamebox.Text = "Last Name";
+            this.LastNamebox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
             // 
             // Clear
             // 
@@ -130,7 +161,7 @@
             // 
             this.TimeOut.AutoSize = true;
             this.TimeOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeOut.Location = new System.Drawing.Point(276, 113);
+            this.TimeOut.Location = new System.Drawing.Point(240, 9);
             this.TimeOut.Name = "TimeOut";
             this.TimeOut.Size = new System.Drawing.Size(89, 24);
             this.TimeOut.TabIndex = 4;
@@ -143,7 +174,7 @@
             // 
             this.TimeIn.AutoSize = true;
             this.TimeIn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeIn.Location = new System.Drawing.Point(79, 113);
+            this.TimeIn.Location = new System.Drawing.Point(36, 8);
             this.TimeIn.Name = "TimeIn";
             this.TimeIn.Size = new System.Drawing.Size(76, 24);
             this.TimeIn.TabIndex = 3;
@@ -170,7 +201,7 @@
             this.MiddleInitialbox.Size = new System.Drawing.Size(165, 26);
             this.MiddleInitialbox.TabIndex = 0;
             this.MiddleInitialbox.Text = "Middle Initial";
-            this.MiddleInitialbox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
+            this.MiddleInitialbox.TextChanged += new System.EventHandler(this.MiddleInitialbox_TextChanged);
             // 
             // LogbookFormLabel
             // 
@@ -185,35 +216,16 @@
             this.LogbookFormLabel.Text = "Logbook \r\nForm";
             this.LogbookFormLabel.Click += new System.EventHandler(this.LogbookFormlabel_Click);
             // 
-            // LastNamebox
+            // radioboxgroup
             // 
-            this.LastNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNamebox.Location = new System.Drawing.Point(249, 49);
-            this.LastNamebox.Name = "LastNamebox";
-            this.LastNamebox.Size = new System.Drawing.Size(165, 26);
-            this.LastNamebox.TabIndex = 12;
-            this.LastNamebox.Text = "Last Name";
-            this.LastNamebox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // Honorificsbox
-            // 
-            this.Honorificsbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Honorificsbox.Location = new System.Drawing.Point(45, 17);
-            this.Honorificsbox.Name = "Honorificsbox";
-            this.Honorificsbox.Size = new System.Drawing.Size(165, 26);
-            this.Honorificsbox.TabIndex = 13;
-            this.Honorificsbox.Text = "Honorifics";
-            this.Honorificsbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // FirstNamebox
-            // 
-            this.FirstNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNamebox.Location = new System.Drawing.Point(249, 17);
-            this.FirstNamebox.Name = "FirstNamebox";
-            this.FirstNamebox.Size = new System.Drawing.Size(165, 26);
-            this.FirstNamebox.TabIndex = 14;
-            this.FirstNamebox.Text = "First Name";
-            this.FirstNamebox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.radioboxgroup.Controls.Add(this.TimeIn);
+            this.radioboxgroup.Controls.Add(this.TimeOut);
+            this.radioboxgroup.Location = new System.Drawing.Point(45, 104);
+            this.radioboxgroup.Name = "radioboxgroup";
+            this.radioboxgroup.Size = new System.Drawing.Size(369, 38);
+            this.radioboxgroup.TabIndex = 15;
+            this.radioboxgroup.TabStop = false;
+            this.radioboxgroup.Enter += new System.EventHandler(this.radioboxgroup_Enter);
             // 
             // LogDetails
             // 
@@ -232,6 +244,8 @@
             this.Load += new System.EventHandler(this.LogDetails_Load);
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
+            this.radioboxgroup.ResumeLayout(false);
+            this.radioboxgroup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +267,6 @@
         private System.Windows.Forms.TextBox FirstNamebox;
         private System.Windows.Forms.TextBox Honorificsbox;
         private System.Windows.Forms.TextBox LastNamebox;
+        private System.Windows.Forms.GroupBox radioboxgroup;
     }
 }

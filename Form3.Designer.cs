@@ -125,6 +125,7 @@
             this.Passwordbox.Size = new System.Drawing.Size(369, 26);
             this.Passwordbox.TabIndex = 7;
             this.Passwordbox.Text = "Password";
+            this.Passwordbox.UseSystemPasswordChar = true;
             this.Passwordbox.TextChanged += new System.EventHandler(this.Passwordbox_TextChanged);
             // 
             // AdminLogin

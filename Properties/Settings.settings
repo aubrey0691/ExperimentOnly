@@ -5,10 +5,10 @@
     <Setting Name="loginConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Host=localhost;Database=login;Username=postgres;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Host=localhost;Database=login;Username=postgres;Password=root;Persist Security Info=True;port=5432&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;Npgsql&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Host=localhost;Database=login;Username=postgres;Persist Security Info=True</Value>
+      <Value Profile="(Default)">Host=localhost;Database=login;Username=postgres;Password=root;Persist Security Info=True;port=5432</Value>
     </Setting>
   </Settings>
 </SettingsFile>

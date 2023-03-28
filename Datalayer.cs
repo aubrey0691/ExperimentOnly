@@ -24,7 +24,7 @@ namespace ExperimentOnly
         public string getmessage { get; set; }
         public Datalayer()
         {
-            string cs = "User Id=postgres;Host=localhost;Database=login;Port=5432;Initial Schema=public;password=root;";
+            string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
             conn_ = new PgSqlConnection(cs);
             cmd_ = new PgSqlCommand();
             dtable_ = new DataTable();

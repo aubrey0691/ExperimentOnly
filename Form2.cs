@@ -14,12 +14,22 @@ using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using NpgsqlTypes;
 using Devart.Data.PostgreSql;
+using System.ComponentModel.Composition;
+using System.Data.OleDb;
+using Microsoft.Office.Interop.Excel;
+using Mysqlx.Crud;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Org.BouncyCastle.Utilities;
+
 
 namespace ExperimentOnly
 {
     public partial class LogDetails : Form
     {
+        OleDbConnection con = new OleDbConnection();
+        OleDbCommand command = new OleDbCommand();
         string n1;
+        int rm;
         public LogDetails()
         {
             InitializeComponent();
@@ -32,48 +42,58 @@ namespace ExperimentOnly
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            //Log Book Page (form 2) closes and details are recorded in the database.
-           /* string connetionString = null;
-            MySqlConnection cnn;
-            connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3307;";
-            cnn = new MySqlConnection(connetionString);
-            try
+           /* try
             {
-                cnn.Open();
-                MessageBox.Show("Connection Open ! ");
-                cnn.Close();
+                con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Internship\\Documents\\logdatabase.accdb";
+                con.Open();
+                command = new OleDbCommand("insert into logdata (Time_State,First_Name, Middle_Initial, Last_Name, Purpose, Email, Affiliation)" +
+                       "values (@honorifics, @firstname, @middleinitial, @lastname, @timeinout, @purpose, @email, @affiliation)", con);
+                rm = command.ExecuteNonQuery();
+                MessageBox.Show("Log Inserted!");
             }
             catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
+            { 
+                MessageBox.Show("Log Can't Be Inserted!");
             }*/
-            string constr = @"server=127.0.0.1;port=5432;user = postgres;password=root;Database=login;";
-            
-            using (PgSqlConnection con = new PgSqlConnection(constr))
-            {
-                using (PgSqlCommand cmd = new PgSqlCommand("INSERT INTO Logbook(First Name, Middle Initial, Last Name, Time in/Time out, Purpose, Email, Affiliation) " +
-                    "VALUES(@honorifics, @firstname, @middleinitial, @lastname, @timeinout, @purpose, @email, @affiliation)"))
+
+                //Log Book Page (form 2) closes and details are recorded in the database.
+                /*string connetionString = null;
+                 MySqlConnection cnn;
+                 connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3307;";
+                 cnn = new MySqlConnection(connetionString);
+                 try
+                 {
+                     cnn.Open();
+                     MessageBox.Show("Connection Open ! ");
+                     cnn.Close();
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show("Can not open connection ! ");
+                 }*/
+                string constr = @"server=127.0.0.1;port=5432;user = postgres;password=root;Database=login;";
+
+                using (PgSqlConnection con = new PgSqlConnection(constr))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
-                    cmd.Parameters.AddWithValue("@firstname", FirstNamebox.Text);
-                    cmd.Parameters.AddWithValue("@middleinitial", MiddleInitialbox.Text);
-                    cmd.Parameters.AddWithValue("@lastname", LastNamebox.Text);
-                    cmd.Parameters.AddWithValue("@timeinout", n1);
-                    cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
-                    cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
-                    cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
                     con.Open();
-                    int i = cmd.ExecuteNonQuery();
+                    using (PgSqlCommand cmd = new PgSqlCommand("INSERT INTO Logbook(First_Name, Middle_Initial, Last_ Name, Time_state, Purpose, Email, Affiliation) " +
+                        "VALUES(@honorifics, @firstname, @middleinitial, @lastname, @timestate, @purpose, @email, @affiliation)"))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
+                        cmd.Parameters.AddWithValue("@firstname", FirstNamebox.Text);
+                        cmd.Parameters.AddWithValue("@middleinitial", MiddleInitialbox.Text);
+                        cmd.Parameters.AddWithValue("@lastname", LastNamebox.Text);
+                        cmd.Parameters.AddWithValue("@timeinout", n1);
+                        cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
+                        cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
+                        cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
+                        int i = cmd.ExecuteNonQuery();
+                        con.Close();
+                    } 
 
-                    con.Close();
-                } 
-
+                }
             }
-
-
-        }
 
         public static void main(string[] args)
         {
@@ -84,7 +104,8 @@ namespace ExperimentOnly
 
         private void LogDetails_Load(object sender, EventArgs e)
         {
-
+            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Internship\\Documents\\logdatabase.accdb";
+            //Log Book Page (form 2) closes and details are recorded in the database.
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

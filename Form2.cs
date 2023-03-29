@@ -26,8 +26,8 @@ namespace ExperimentOnly
 {
     public partial class LogDetails : Form
     {
-        OleDbConnection con = new OleDbConnection();
-        OleDbCommand command = new OleDbCommand();
+        PgSqlConnection con = new PgSqlConnection();
+        PgSqlCommand command = new PgSqlCommand();
         string n1;
         int rm;
         public LogDetails()
@@ -76,15 +76,17 @@ namespace ExperimentOnly
                 using (PgSqlConnection con = new PgSqlConnection(constr))
                 {
                     con.Open();
-                    using (PgSqlCommand cmd = new PgSqlCommand("INSERT INTO Logbook(First_Name, Middle_Initial, Last_ Name, Time_state, Purpose, Email, Affiliation) " +
-                        "VALUES(@honorifics, @firstname, @middleinitial, @lastname, @timestate, @purpose, @email, @affiliation)"))
+                    using (PgSqlCommand cmd = new PgSqlCommand("INSERT INTO lbdata(time_state, honorifics, first_name, middle_initial, last_name, purpose, email, affiliation) " +
+                        "VALUES(@time_state,@honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con))
+
                     {
+                        
                         cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@time_state", "test");
                         cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
-                        cmd.Parameters.AddWithValue("@firstname", FirstNamebox.Text);
-                        cmd.Parameters.AddWithValue("@middleinitial", MiddleInitialbox.Text);
-                        cmd.Parameters.AddWithValue("@lastname", LastNamebox.Text);
-                        cmd.Parameters.AddWithValue("@timeinout", n1);
+                        cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
+                        cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
+                        cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
                         cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
                         cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
                         cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
@@ -104,8 +106,8 @@ namespace ExperimentOnly
 
         private void LogDetails_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Internship\\Documents\\logdatabase.accdb";
-            //Log Book Page (form 2) closes and details are recorded in the database.
+            PgSqlConnection con = new PgSqlConnection("User Id=postgres;Database=login;Port=5432;Initial Schema=public;password=root;Integrated Security=True");
+            
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

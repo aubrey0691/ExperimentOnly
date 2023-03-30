@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogbookDataB));
             this.Addbutt = new System.Windows.Forms.Button();
             this.Exportbutt = new System.Windows.Forms.Button();
             this.Changebutt = new System.Windows.Forms.Button();
@@ -99,7 +98,7 @@
             // Guestbutt
             // 
             this.Guestbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Guestbutt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Guestbutt.BackgroundImage")));
+            this.Guestbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Guest;
             this.Guestbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Guestbutt.FlatAppearance.BorderSize = 0;
             this.Guestbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,7 +111,7 @@
             // Internbutt
             // 
             this.Internbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Internbutt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Internbutt.BackgroundImage")));
+            this.Internbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_10;
             this.Internbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Internbutt.FlatAppearance.BorderSize = 0;
             this.Internbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -129,11 +128,12 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(173, 569);
+            this.button1.Location = new System.Drawing.Point(60, 570);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(33, 37);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -142,7 +142,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(295, 567);
+            this.button2.Location = new System.Drawing.Point(246, 571);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(33, 36);
             this.button2.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(234, 570);
+            this.button3.Location = new System.Drawing.Point(153, 570);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 36);
             this.button3.TabIndex = 8;

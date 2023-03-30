@@ -44,7 +44,7 @@ namespace ExperimentOnly
 
         private void Guest_Click_3(object sender, EventArgs e)
         {
-            LogDetails f2 = new LogDetails();
+            Log f2 = new Log();
             f2.Show();
             this.Hide();
         }
@@ -53,7 +53,7 @@ namespace ExperimentOnly
         {
             //Landing page(form1) Intern button opens the Intern Log Book Page(form2) upon clicking
             
-            LogDetails f2 = new LogDetails();
+            Log f2 = new Log();
             f2.Show();
             this.Hide();
         }

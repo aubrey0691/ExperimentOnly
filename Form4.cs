@@ -16,5 +16,24 @@ namespace ExperimentOnly
         {
             InitializeComponent();
         }
+
+        private void Changebutt_Click(object sender, EventArgs e)
+        {
+            ChangePass f1 = new ChangePass();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void Addbutt_Click(object sender, EventArgs e)
+        {
+            addlog f1 = new addlog();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

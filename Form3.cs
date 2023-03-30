@@ -139,6 +139,13 @@ namespace ExperimentOnly
         {
 
         }
+
+        private void HomeButton_Click_1(object sender, EventArgs e)
+        {
+            LandingPage f1 = new LandingPage();
+            f1.Show();
+            this.Hide();
+        }
     }
     
 }

@@ -42,6 +42,7 @@ namespace ExperimentOnly
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+
            /* try
             {
                 con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Internship\\Documents\\logdatabase.accdb";

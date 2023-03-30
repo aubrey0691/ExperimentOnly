@@ -1,6 +1,6 @@
 ﻿namespace ExperimentOnly
 {
-    partial class LogDetails
+    partial class addlog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
             this.FirstNamebox = new System.Windows.Forms.TextBox();
             this.Honorificsbox = new System.Windows.Forms.TextBox();
@@ -42,10 +43,26 @@
             this.radioboxgroup = new System.Windows.Forms.GroupBox();
             this.TimeIn = new System.Windows.Forms.RadioButton();
             this.TimeOut = new System.Windows.Forms.RadioButton();
-            this.LogbookFormLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupLogDeets.SuspendLayout();
             this.radioboxgroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LogbookFormLabel
+            // 
+            this.LogbookFormLabel.AutoSize = true;
+            this.LogbookFormLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LogbookFormLabel.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
+            this.LogbookFormLabel.ForeColor = System.Drawing.Color.Black;
+            this.LogbookFormLabel.Location = new System.Drawing.Point(214, 110);
+            this.LogbookFormLabel.Name = "LogbookFormLabel";
+            this.LogbookFormLabel.Size = new System.Drawing.Size(321, 77);
+            this.LogbookFormLabel.TabIndex = 13;
+            this.LogbookFormLabel.Text = "Add Logs";
+            this.LogbookFormLabel.Click += new System.EventHandler(this.LogbookFormLabel_Click);
             // 
             // GroupLogDeets
             // 
@@ -61,45 +78,38 @@
             this.GroupLogDeets.Controls.Add(this.Purposebox);
             this.GroupLogDeets.Controls.Add(this.MiddleInitialbox);
             this.GroupLogDeets.Controls.Add(this.radioboxgroup);
-            this.GroupLogDeets.Location = new System.Drawing.Point(92, 350);
+            this.GroupLogDeets.Location = new System.Drawing.Point(136, 277);
             this.GroupLogDeets.Name = "GroupLogDeets";
             this.GroupLogDeets.Size = new System.Drawing.Size(479, 271);
-            this.GroupLogDeets.TabIndex = 0;
+            this.GroupLogDeets.TabIndex = 12;
             this.GroupLogDeets.TabStop = false;
-            this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // FirstNamebox
             // 
-            this.FirstNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FirstNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNamebox.Location = new System.Drawing.Point(249, 17);
             this.FirstNamebox.Name = "FirstNamebox";
-            this.FirstNamebox.Size = new System.Drawing.Size(165, 19);
+            this.FirstNamebox.Size = new System.Drawing.Size(165, 26);
             this.FirstNamebox.TabIndex = 14;
             this.FirstNamebox.Text = "First Name";
-            this.FirstNamebox.TextChanged += new System.EventHandler(this.FirstNamebox_TextChanged);
             // 
             // Honorificsbox
             // 
-            this.Honorificsbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Honorificsbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Honorificsbox.Location = new System.Drawing.Point(45, 17);
             this.Honorificsbox.Name = "Honorificsbox";
-            this.Honorificsbox.Size = new System.Drawing.Size(165, 19);
+            this.Honorificsbox.Size = new System.Drawing.Size(165, 26);
             this.Honorificsbox.TabIndex = 13;
             this.Honorificsbox.Text = "Honorifics";
-            this.Honorificsbox.TextChanged += new System.EventHandler(this.Honorificsbox_TextChanged);
             // 
             // LastNamebox
             // 
-            this.LastNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LastNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNamebox.Location = new System.Drawing.Point(249, 49);
             this.LastNamebox.Name = "LastNamebox";
-            this.LastNamebox.Size = new System.Drawing.Size(165, 19);
+            this.LastNamebox.Size = new System.Drawing.Size(165, 26);
             this.LastNamebox.TabIndex = 12;
             this.LastNamebox.Text = "Last Name";
-            this.LastNamebox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
             // 
             // Clear
             // 
@@ -116,7 +126,6 @@
             this.Clear.TabIndex = 11;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // HomeButton
             // 
@@ -130,7 +139,6 @@
             this.HomeButton.Size = new System.Drawing.Size(32, 27);
             this.HomeButton.TabIndex = 10;
             this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // SubmitButton
             // 
@@ -151,70 +159,57 @@
             // 
             // Affiliationbox
             // 
-            this.Affiliationbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Affiliationbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Affiliationbox.Location = new System.Drawing.Point(45, 175);
             this.Affiliationbox.Name = "Affiliationbox";
-            this.Affiliationbox.Size = new System.Drawing.Size(369, 19);
+            this.Affiliationbox.Size = new System.Drawing.Size(369, 26);
             this.Affiliationbox.TabIndex = 7;
             this.Affiliationbox.Text = "Affiliation";
-            this.Affiliationbox.TextChanged += new System.EventHandler(this.Affiliationbox_TextChanged);
             // 
             // EmailAddbox
             // 
-            this.EmailAddbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailAddbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailAddbox.Location = new System.Drawing.Point(45, 143);
             this.EmailAddbox.Name = "EmailAddbox";
-            this.EmailAddbox.Size = new System.Drawing.Size(369, 19);
+            this.EmailAddbox.Size = new System.Drawing.Size(369, 26);
             this.EmailAddbox.TabIndex = 5;
             this.EmailAddbox.Text = "E-mail Address";
-            this.EmailAddbox.TextChanged += new System.EventHandler(this.EmailAddbox_TextChanged);
             // 
             // Purposebox
             // 
-            this.Purposebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Purposebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purposebox.Location = new System.Drawing.Point(45, 81);
             this.Purposebox.Name = "Purposebox";
-            this.Purposebox.Size = new System.Drawing.Size(369, 19);
+            this.Purposebox.Size = new System.Drawing.Size(369, 26);
             this.Purposebox.TabIndex = 2;
             this.Purposebox.Text = "Purpose";
-            this.Purposebox.TextChanged += new System.EventHandler(this.Purposebox_TextChanged);
             // 
             // MiddleInitialbox
             // 
-            this.MiddleInitialbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MiddleInitialbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleInitialbox.Location = new System.Drawing.Point(45, 49);
             this.MiddleInitialbox.Name = "MiddleInitialbox";
-            this.MiddleInitialbox.Size = new System.Drawing.Size(165, 19);
+            this.MiddleInitialbox.Size = new System.Drawing.Size(165, 26);
             this.MiddleInitialbox.TabIndex = 0;
             this.MiddleInitialbox.Text = "Middle Initial";
-            this.MiddleInitialbox.TextChanged += new System.EventHandler(this.MiddleInitialbox_TextChanged);
             // 
             // radioboxgroup
             // 
             this.radioboxgroup.Controls.Add(this.TimeIn);
             this.radioboxgroup.Controls.Add(this.TimeOut);
-            this.radioboxgroup.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radioboxgroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioboxgroup.Location = new System.Drawing.Point(45, 101);
+            this.radioboxgroup.Location = new System.Drawing.Point(45, 104);
             this.radioboxgroup.Name = "radioboxgroup";
             this.radioboxgroup.Size = new System.Drawing.Size(369, 38);
             this.radioboxgroup.TabIndex = 15;
             this.radioboxgroup.TabStop = false;
-            this.radioboxgroup.Enter += new System.EventHandler(this.radioboxgroup_Enter);
             // 
             // TimeIn
             // 
             this.TimeIn.AutoSize = true;
-            this.TimeIn.FlatAppearance.BorderSize = 0;
-            this.TimeIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimeIn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeIn.Location = new System.Drawing.Point(36, 8);
             this.TimeIn.Name = "TimeIn";
-            this.TimeIn.Size = new System.Drawing.Size(75, 24);
+            this.TimeIn.Size = new System.Drawing.Size(76, 24);
             this.TimeIn.TabIndex = 3;
             this.TimeIn.TabStop = true;
             this.TimeIn.Text = "Time In";
@@ -224,50 +219,68 @@
             // TimeOut
             // 
             this.TimeOut.AutoSize = true;
-            this.TimeOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TimeOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeOut.Location = new System.Drawing.Point(240, 9);
             this.TimeOut.Name = "TimeOut";
-            this.TimeOut.Size = new System.Drawing.Size(88, 24);
+            this.TimeOut.Size = new System.Drawing.Size(89, 24);
             this.TimeOut.TabIndex = 4;
             this.TimeOut.TabStop = true;
             this.TimeOut.Text = "Time Out";
             this.TimeOut.UseVisualStyleBackColor = true;
             this.TimeOut.CheckedChanged += new System.EventHandler(this.TimeOut_CheckedChanged);
             // 
-            // LogbookFormLabel
+            // dateTimePicker1
             // 
-            this.LogbookFormLabel.AutoSize = true;
-            this.LogbookFormLabel.BackColor = System.Drawing.Color.Transparent;
-            this.LogbookFormLabel.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold);
-            this.LogbookFormLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogbookFormLabel.Location = new System.Drawing.Point(210, 37);
-            this.LogbookFormLabel.Name = "LogbookFormLabel";
-            this.LogbookFormLabel.Size = new System.Drawing.Size(323, 154);
-            this.LogbookFormLabel.TabIndex = 11;
-            this.LogbookFormLabel.Text = "Logbook \r\nForm";
-            this.LogbookFormLabel.Click += new System.EventHandler(this.LogbookFormlabel_Click);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(181, 247);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 24);
+            this.dateTimePicker1.TabIndex = 14;
             // 
-            // LogDetails
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(440, 247);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 24);
+            this.dateTimePicker2.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_20;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(729, 95);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // addlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Flat;
+            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_16;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1224, 681);
+            this.ClientSize = new System.Drawing.Size(784, 571);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.LogbookFormLabel);
             this.Controls.Add(this.GroupLogDeets);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
-            this.MaximumSize = new System.Drawing.Size(1240, 720);
-            this.MinimumSize = new System.Drawing.Size(1240, 720);
-            this.Name = "LogDetails";
+            this.MaximumSize = new System.Drawing.Size(800, 610);
+            this.MinimumSize = new System.Drawing.Size(800, 610);
+            this.Name = "addlog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Guest/Intern Log";
-            this.Load += new System.EventHandler(this.LogDetails_Load);
+            this.Text = "Form6";
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
             this.radioboxgroup.ResumeLayout(false);
             this.radioboxgroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,20 +288,23 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GroupLogDeets;
-        private System.Windows.Forms.TextBox MiddleInitialbox;
-        private System.Windows.Forms.TextBox Purposebox;
-        private System.Windows.Forms.RadioButton TimeOut;
-        private System.Windows.Forms.RadioButton TimeIn;
-        private System.Windows.Forms.TextBox Affiliationbox;
-        private System.Windows.Forms.TextBox EmailAddbox;
-        private System.Windows.Forms.Button SubmitButton;
-        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Label LogbookFormLabel;
-        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.GroupBox GroupLogDeets;
         private System.Windows.Forms.TextBox FirstNamebox;
         private System.Windows.Forms.TextBox Honorificsbox;
         private System.Windows.Forms.TextBox LastNamebox;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button HomeButton;
+        private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.TextBox Affiliationbox;
+        private System.Windows.Forms.TextBox EmailAddbox;
+        private System.Windows.Forms.TextBox Purposebox;
+        private System.Windows.Forms.TextBox MiddleInitialbox;
         private System.Windows.Forms.GroupBox radioboxgroup;
+        private System.Windows.Forms.RadioButton TimeIn;
+        private System.Windows.Forms.RadioButton TimeOut;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

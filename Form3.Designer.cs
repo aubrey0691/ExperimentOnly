@@ -128,10 +128,11 @@
             // 
             // Passwordbox
             // 
+            this.Passwordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Passwordbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Passwordbox.Location = new System.Drawing.Point(47, 92);
             this.Passwordbox.Name = "Passwordbox";
-            this.Passwordbox.Size = new System.Drawing.Size(369, 26);
+            this.Passwordbox.Size = new System.Drawing.Size(369, 19);
             this.Passwordbox.TabIndex = 7;
             this.Passwordbox.Text = "Password";
             this.Passwordbox.UseSystemPasswordChar = true;

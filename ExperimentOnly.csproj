@@ -454,6 +454,12 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="addlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addlog.Designer.cs">
+      <DependentUpon>addlog.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -463,6 +469,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servernpg.cs" />
+    <EmbeddedResource Include="addlog.resx">
+      <DependentUpon>addlog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -567,6 +576,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon-white-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

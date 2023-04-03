@@ -442,6 +442,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,10 +466,25 @@
     <Compile Include="addlog.Designer.cs">
       <DependentUpon>addlog.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginDataSet1.Designer.cs">
+    <Compile Include="loginDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs" />
     <Compile Include="Program.cs" />
@@ -480,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
@@ -498,16 +522,49 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="loginDataSet1.xsc">
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+    <None Include="loginDataSet11.xsc">
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="loginDataSet1.xsd">
+    <None Include="loginDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>loginDataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="loginDataSet1.xss">
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+    <None Include="loginDataSet11.xss">
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet2.xsc">
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet2.xss">
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet21.xsc">
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet21.xss">
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet3.xsc">
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet3.xss">
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

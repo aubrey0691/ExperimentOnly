@@ -9,14 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-using Microsoft.Office.Interop.Excel;
-
 
 namespace ExperimentOnly
 {
-    public partial class LogbookDataB : Form
+    public partial class Delete : Form
     {
-        public LogbookDataB()
+        public Delete()
         {
             InitializeComponent();
         }
@@ -45,7 +43,7 @@ namespace ExperimentOnly
 
         }
 
-      
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -54,13 +52,7 @@ namespace ExperimentOnly
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void LogbookDataB_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
-            string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;"; 
+            string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
             PgSqlConnection connection = null;
             PgSqlDataReader reader = null;
             try
@@ -73,7 +65,7 @@ namespace ExperimentOnly
                 dataAdapter.SelectCommand = new PgSqlCommand(stm, connection);
                 DataSet table = new DataSet();
                 dataAdapter.Fill(table);
-                
+
             }
             finally
             {
@@ -83,15 +75,39 @@ namespace ExperimentOnly
                     connection.Close();
             }
 
-            this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
+            this.logbookdtTableAdapter.Fill(this.loginDataSet.logbookdt);
+        }
+
+        private void IDbox_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
-            Delete f1 = new Delete();
-            f1.Show();
-            this.Hide();
+            string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;"; ;
+            PgSqlConnection connection = null;
+            try
+            {
+                connection = new PgSqlConnection(connectionString);
+                connection.Open();
+                PgSqlCommand cmd = new PgSqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "delete from logbookdt where id = @id;";
+                cmd.Parameters.AddWithValue("@id", IDbox.Text);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+        }
+
+        private void Delete_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
+            this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
 
         }
     }

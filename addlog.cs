@@ -17,8 +17,14 @@ namespace ExperimentOnly
 {
     public partial class addlog : Form
     {
+        PgSqlConnection con = new PgSqlConnection();
+        PgSqlCommand command = new PgSqlCommand();
+        string n1;
+        int rm;
+        Datalayer dl;
         public addlog()
         {
+            dl = new Datalayer();
             InitializeComponent();
         }
         string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
@@ -26,17 +32,60 @@ namespace ExperimentOnly
         {
 
         }
-
+       
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            string honor = Honorificsbox.Text, fname = FirstNamebox.Text, middlein = MiddleInitialbox.Text, lname = LastNamebox.Text, purpose = Purposebox.Text, email = EmailAddbox.Text, aff = Affiliationbox.Text;
-            PgSqlConnection con = new PgSqlConnection(cs);
-            
-            //DateTime inputdate = DateTime.Parse(dateTimePicker1.Text);
-            // if (RadioButton.Checked == true) { timestate = "Male"; } else { timestate = "Female"; }
-            con.Open();
-            PgSqlCommand cmd = new PgSqlCommand("INSERT INTO logbookdata '" + honor + "','" + fname +"','" + middlein + "', '" + lname +"','" + purpose + "','" + email +"','" + aff + "'", con);
-            MessageBox.Show("Successfully added");
+            try
+            {
+                //Create SqlConnection
+                PgSqlConnection con = new PgSqlConnection(cs);
+                PgSqlCommand cmd = new PgSqlCommand("insert into logbookdt(date,time,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
+                DateTime aDate = DateTime.Now;
+                DateTime aTime = DateTime.Now;
+                aDate.ToString("MM/dd/yyyy");
+                aTime.ToString("HH:mm:ss");
+                string scolor = "";
+                if (TimeOut.Checked)
+                {
+                    scolor = TimeOut.Text;
+                }
+
+                if (TimeIn.Checked)
+                {
+                    scolor = TimeIn.Text;
+                }
+                cmd.Parameters.AddWithValue("@date", aDate);
+                cmd.Parameters.AddWithValue("@time", aTime);
+                cmd.Parameters.AddWithValue("@time_state", scolor);
+                cmd.Parameters.AddWithValue("@time_state", n1);
+                cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
+                cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
+                cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
+                cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
+                cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
+                cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
+                cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
+                con.Open();
+                PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                con.Close();
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
+                {
+                    MessageBox.Show("Successful!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Failed!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void TimeIn_CheckedChanged(object sender, EventArgs e)
@@ -47,6 +96,24 @@ namespace ExperimentOnly
         private void TimeOut_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            Honorificsbox.Clear();
+            FirstNamebox.Clear();
+            MiddleInitialbox.Clear();
+            LastNamebox.Clear();
+            Purposebox.Clear();
+            Affiliationbox.Clear();
+            EmailAddbox.Clear();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            LogbookDataB fm = new LogbookDataB();
+            fm.Show();
+            this.Hide();
         }
     }
 }

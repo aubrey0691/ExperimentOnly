@@ -90,35 +90,6 @@ namespace ExperimentOnly
             PgSqlConnection con = new PgSqlConnection("User Id=postgres;Database=login;Port=5432;Initial Schema=public;password=root;Initial Catalog=login;Integrated Security=True");
             con.Open();
         }
-
-        private void runQuery()
-        {
-            string s_id;
-
-            string qry = "select username from public.users where password = '" + Passwordbox.Text + "'";
-
-            dl.getsingleColumnValueByIndex(qry, out s_id, 0);
-
-            if (s_id != null)
-            {
-
-                LogbookDataB sd = new LogbookDataB();
-
-                sd.Show();
-                this.Hide();
-            }
-
-            else
-
-            {
-
-                MessageBox.Show("Password Doesn't Match Please Try Again !", "Error"
-
-                , MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-        }
         
         private void Passwordbox_TextChanged(object sender, EventArgs e)
         {

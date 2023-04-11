@@ -37,6 +37,7 @@
             this.Internbutt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.logbookdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,32 +51,31 @@
             this.purposeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.affiliationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
-            this.button3 = new System.Windows.Forms.Button();
             this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.loginDataSet1 = new ExperimentOnly.loginDataSet();
             this.logbookdtBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.loginDataSet = new ExperimentOnly.loginDataSet();
             this.logbookdtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logbookdtTableAdapter = new ExperimentOnly.loginDataSetTableAdapters.logbookdtTableAdapter();
+            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
+            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // Addbutt
             // 
             this.Addbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Addbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.b58bb27f_98dd_4002_ba3e_6c897898b46b;
-            this.Addbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Addbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.add;
+            this.Addbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Addbutt.FlatAppearance.BorderSize = 0;
             this.Addbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Addbutt.Location = new System.Drawing.Point(12, 188);
@@ -88,8 +88,8 @@
             // Exportbutt
             // 
             this.Exportbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Exportbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._8db97a4a_6546_4a63_8866_bb9023f59b49;
-            this.Exportbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Exportbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Export;
+            this.Exportbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Exportbutt.FlatAppearance.BorderSize = 0;
             this.Exportbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exportbutt.Location = new System.Drawing.Point(12, 261);
@@ -97,13 +97,12 @@
             this.Exportbutt.Size = new System.Drawing.Size(317, 58);
             this.Exportbutt.TabIndex = 1;
             this.Exportbutt.UseVisualStyleBackColor = false;
-            this.Exportbutt.Click += new System.EventHandler(this.Exportbutt_Click);
             // 
             // Changebutt
             // 
             this.Changebutt.BackColor = System.Drawing.Color.Transparent;
-            this.Changebutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._21791dda_5b38_4042_a224_1bcc9dc591cf;
-            this.Changebutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Changebutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.changepass;
+            this.Changebutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Changebutt.FlatAppearance.BorderSize = 0;
             this.Changebutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Changebutt.Location = new System.Drawing.Point(12, 334);
@@ -116,8 +115,8 @@
             // Clearbutt
             // 
             this.Clearbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Clearbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.b8633542_aa99_450b_8cf5_27f889ec8387;
-            this.Clearbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clearbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Clear_data;
+            this.Clearbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Clearbutt.FlatAppearance.BorderSize = 0;
             this.Clearbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearbutt.Location = new System.Drawing.Point(12, 407);
@@ -125,13 +124,12 @@
             this.Clearbutt.Size = new System.Drawing.Size(317, 58);
             this.Clearbutt.TabIndex = 3;
             this.Clearbutt.UseVisualStyleBackColor = false;
-            this.Clearbutt.Click += new System.EventHandler(this.Clearbutt_Click);
             // 
             // Guestbutt
             // 
             this.Guestbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Guestbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._91810ab9_380f_4b5c_bd3b_9913493126d8;
-            this.Guestbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Guestbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Guest;
+            this.Guestbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Guestbutt.FlatAppearance.BorderSize = 0;
             this.Guestbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guestbutt.Location = new System.Drawing.Point(12, 481);
@@ -139,13 +137,12 @@
             this.Guestbutt.Size = new System.Drawing.Size(155, 58);
             this.Guestbutt.TabIndex = 4;
             this.Guestbutt.UseVisualStyleBackColor = false;
-            this.Guestbutt.Click += new System.EventHandler(this.Guestbutt_Click);
             // 
             // Internbutt
             // 
             this.Internbutt.BackColor = System.Drawing.Color.Transparent;
-            this.Internbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.a54bec2b_e8b5_4be3_bcbe_1e0e534c7e3d;
-            this.Internbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Internbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_10;
+            this.Internbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Internbutt.FlatAppearance.BorderSize = 0;
             this.Internbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Internbutt.Location = new System.Drawing.Point(173, 481);
@@ -153,18 +150,17 @@
             this.Internbutt.Size = new System.Drawing.Size(155, 58);
             this.Internbutt.TabIndex = 5;
             this.Internbutt.UseVisualStyleBackColor = false;
-            this.Internbutt.Click += new System.EventHandler(this.Internbutt_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ExperimentOnly.Properties.Resources._1758c78e_e16a_499f_81ba_2baa637c6268;
+            this.button1.BackgroundImage = global::ExperimentOnly.Properties.Resources._out;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(17, 559);
+            this.button1.Location = new System.Drawing.Point(60, 570);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 37);
+            this.button1.Size = new System.Drawing.Size(33, 37);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -172,16 +168,30 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ExperimentOnly.Properties.Resources._60acf174_6dfd_4dde_b990_61bfe8edc3781;
+            this.button2.BackgroundImage = global::ExperimentOnly.Properties.Resources.bin;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(230, 559);
+            this.button2.Location = new System.Drawing.Point(246, 571);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 37);
+            this.button2.Size = new System.Drawing.Size(33, 36);
             this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::ExperimentOnly.Properties.Resources.refresh_icon_white_1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(153, 570);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 36);
+            this.button3.TabIndex = 8;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -274,30 +284,6 @@
             this.affiliationDataGridViewTextBoxColumn.HeaderText = "affiliation";
             this.affiliationDataGridViewTextBoxColumn.Name = "affiliationDataGridViewTextBoxColumn";
             // 
-            // logbookdtBindingSource3
-            // 
-            this.logbookdtBindingSource3.DataMember = "logbookdt";
-            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
-            // 
-            // loginDataSet3
-            // 
-            this.loginDataSet3.DataSetName = "loginDataSet3";
-            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::ExperimentOnly.Properties.Resources._23b37693_a35c_4e9a_90fc_c07ffe817684;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(124, 559);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 37);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // logbookdtBindingSource2
             // 
             this.logbookdtBindingSource2.DataMember = "logbookdt";
@@ -327,6 +313,16 @@
             // 
             this.logbookdtTableAdapter.ClearBeforeFill = true;
             // 
+            // loginDataSet3
+            // 
+            this.loginDataSet3.DataSetName = "loginDataSet3";
+            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // logbookdtBindingSource3
+            // 
+            this.logbookdtBindingSource3.DataMember = "logbookdt";
+            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
+            // 
             // logbookdtTableAdapter1
             // 
             this.logbookdtTableAdapter1.ClearBeforeFill = true;
@@ -335,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Logs__3_;
+            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
             this.Controls.Add(this.dataGridView1);
@@ -357,13 +353,13 @@
             this.Load += new System.EventHandler(this.LogbookDataB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,6 +374,7 @@
         private System.Windows.Forms.Button Internbutt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.BindingSource logbookdataBindingSource;
         private loginDataSet loginDataSet;
         private loginDataSet loginDataSet1;
@@ -400,6 +397,5 @@
         private loginDataSet3 loginDataSet3;
         private System.Windows.Forms.BindingSource logbookdtBindingSource3;
         private loginDataSet3TableAdapters.logbookdtTableAdapter logbookdtTableAdapter1;
-        private System.Windows.Forms.Button button3;
     }
 }

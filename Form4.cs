@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Devart.Data;
 using Devart.Data.PostgreSql;
-
+using Microsoft.Office.Interop.Excel;
 
 
 namespace ExperimentOnly
@@ -21,7 +21,7 @@ namespace ExperimentOnly
             InitializeComponent();
         }
 
-        private void Database_Load(object sender, EventArgs e)
+        private void Changebutt_Click(object sender, EventArgs e)
         {
             ChangePass f1 = new ChangePass();
             f1.Show();
@@ -44,6 +44,8 @@ namespace ExperimentOnly
         {
 
         }
+
+      
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,44 +92,6 @@ namespace ExperimentOnly
             Delete f1 = new Delete();
             f1.Show();
             this.Hide();
-
-        }
-
-        private void Clearbutt_Click(object sender, EventArgs e)
-        {
-            string message = "Do you want to clear the data?";
-            string title = "Clear Data";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-            {
-                string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
-                PgSqlConnection con = new PgSqlConnection(cs);
-                PgSqlCommand cmd = new PgSqlCommand("DELETE from logbookdt", con);
-                con.Open();
-                PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapt.Fill(ds);
-                con.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
-       
-        private void Exportbutt_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void Internbutt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Guestbutt_Click(object sender, EventArgs e)
-        {
 
         }
     }

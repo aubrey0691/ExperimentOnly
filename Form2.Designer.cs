@@ -61,9 +61,9 @@
             this.GroupLogDeets.Controls.Add(this.Purposebox);
             this.GroupLogDeets.Controls.Add(this.MiddleInitialbox);
             this.GroupLogDeets.Controls.Add(this.radioboxgroup);
-            this.GroupLogDeets.Location = new System.Drawing.Point(92, 339);
+            this.GroupLogDeets.Location = new System.Drawing.Point(92, 350);
             this.GroupLogDeets.Name = "GroupLogDeets";
-            this.GroupLogDeets.Size = new System.Drawing.Size(479, 303);
+            this.GroupLogDeets.Size = new System.Drawing.Size(479, 271);
             this.GroupLogDeets.TabIndex = 0;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -72,7 +72,7 @@
             // 
             this.FirstNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FirstNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNamebox.Location = new System.Drawing.Point(259, 27);
+            this.FirstNamebox.Location = new System.Drawing.Point(249, 17);
             this.FirstNamebox.Name = "FirstNamebox";
             this.FirstNamebox.Size = new System.Drawing.Size(165, 19);
             this.FirstNamebox.TabIndex = 14;
@@ -83,7 +83,7 @@
             // 
             this.Honorificsbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Honorificsbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Honorificsbox.Location = new System.Drawing.Point(55, 27);
+            this.Honorificsbox.Location = new System.Drawing.Point(45, 17);
             this.Honorificsbox.Name = "Honorificsbox";
             this.Honorificsbox.Size = new System.Drawing.Size(165, 19);
             this.Honorificsbox.TabIndex = 13;
@@ -94,7 +94,7 @@
             // 
             this.LastNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LastNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNamebox.Location = new System.Drawing.Point(259, 59);
+            this.LastNamebox.Location = new System.Drawing.Point(249, 49);
             this.LastNamebox.Name = "LastNamebox";
             this.LastNamebox.Size = new System.Drawing.Size(165, 19);
             this.LastNamebox.TabIndex = 12;
@@ -110,7 +110,7 @@
             this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Clear.Location = new System.Drawing.Point(131, 226);
+            this.Clear.Location = new System.Drawing.Point(121, 216);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(89, 28);
             this.Clear.TabIndex = 11;
@@ -125,7 +125,7 @@
             this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.Location = new System.Drawing.Point(12, 253);
+            this.HomeButton.Location = new System.Drawing.Point(2, 243);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Size = new System.Drawing.Size(32, 27);
             this.HomeButton.TabIndex = 10;
@@ -141,7 +141,7 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubmitButton.Location = new System.Drawing.Point(252, 226);
+            this.SubmitButton.Location = new System.Drawing.Point(242, 216);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(89, 28);
             this.SubmitButton.TabIndex = 9;
@@ -153,7 +153,7 @@
             // 
             this.Affiliationbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Affiliationbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Affiliationbox.Location = new System.Drawing.Point(55, 185);
+            this.Affiliationbox.Location = new System.Drawing.Point(45, 175);
             this.Affiliationbox.Name = "Affiliationbox";
             this.Affiliationbox.Size = new System.Drawing.Size(369, 19);
             this.Affiliationbox.TabIndex = 7;
@@ -164,7 +164,7 @@
             // 
             this.EmailAddbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailAddbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailAddbox.Location = new System.Drawing.Point(55, 153);
+            this.EmailAddbox.Location = new System.Drawing.Point(45, 143);
             this.EmailAddbox.Name = "EmailAddbox";
             this.EmailAddbox.Size = new System.Drawing.Size(369, 19);
             this.EmailAddbox.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             this.Purposebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Purposebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Purposebox.Location = new System.Drawing.Point(55, 91);
+            this.Purposebox.Location = new System.Drawing.Point(45, 81);
             this.Purposebox.Name = "Purposebox";
             this.Purposebox.Size = new System.Drawing.Size(369, 19);
             this.Purposebox.TabIndex = 2;
@@ -186,7 +186,7 @@
             // 
             this.MiddleInitialbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MiddleInitialbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiddleInitialbox.Location = new System.Drawing.Point(55, 59);
+            this.MiddleInitialbox.Location = new System.Drawing.Point(45, 49);
             this.MiddleInitialbox.Name = "MiddleInitialbox";
             this.MiddleInitialbox.Size = new System.Drawing.Size(165, 19);
             this.MiddleInitialbox.TabIndex = 0;
@@ -199,7 +199,7 @@
             this.radioboxgroup.Controls.Add(this.TimeOut);
             this.radioboxgroup.Cursor = System.Windows.Forms.Cursors.Default;
             this.radioboxgroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioboxgroup.Location = new System.Drawing.Point(55, 111);
+            this.radioboxgroup.Location = new System.Drawing.Point(45, 101);
             this.radioboxgroup.Name = "radioboxgroup";
             this.radioboxgroup.Size = new System.Drawing.Size(369, 38);
             this.radioboxgroup.TabIndex = 15;

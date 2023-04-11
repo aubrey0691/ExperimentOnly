@@ -430,12 +430,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2 - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2 - Copy.Designer.cs">
-      <DependentUpon>Form2 - Copy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,12 +441,6 @@
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4 - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4 - Copy.Designer.cs">
-      <DependentUpon>Form4 - Copy.cs</DependentUpon>
     </Compile>
     <Compile Include="Form6.cs">
       <SubType>Form</SubType>
@@ -498,16 +486,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="loginDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="loginDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet5.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -518,17 +496,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2 - Copy.resx">
-      <DependentUpon>Form2 - Copy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4 - Copy.resx">
-      <DependentUpon>Form4 - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
@@ -593,28 +565,6 @@
     </None>
     <None Include="loginDataSet3.xss">
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet4.xsc">
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet4.xss">
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet5.xsc">
-      <DependentUpon>loginDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet5.xss">
-      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -701,72 +651,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh-icon-white-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b8633542-aa99-450b-8cf5-27f889ec8387.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\d834f0a7-fb6d-48c2-aae6-b3f4dd1a6be6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8db97a4a-6546-4a63-8866-bb9023f59b49.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\21791dda-5b38-4042-a224-1bcc9dc591cf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\b58bb27f-98dd-4002-ba3e-6c897898b46b.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\91810ab9-380f-4b5c-bd3b-9913493126d8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\a54bec2b-e8b5-4be3-bcbe-1e0e534c7e3d.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1758c78e-e16a-499f-81ba-2baa637c6268.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\60acf174-6dfd-4dde-b990-61bfe8edc378.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\60acf174-6dfd-4dde-b990-61bfe8edc3781.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\23b37693-a35c-4e9a-90fc-c07ffe817684.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Asset 61.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deda97a5-fd5c-402f-90ee-0f132417dda6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deda97a5-fd5c-402f-90ee-0f132417dda61.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logs.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logs %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logs %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logs %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logs %283%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bc2ba4c2-4bbb-4256-b8f3-de88f4c9686a.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2057fcaa-04ef-4599-86c4-021ae3fc073c.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\UC Seal - High Quality.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

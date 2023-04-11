@@ -15,6 +15,7 @@ using MySqlX.XDevAPI;
 using System.Xml.Linq;
 using Npgsql;
 using Devart.Data.PostgreSql;
+using System.Data.OleDb;
 
 
 
@@ -89,35 +90,6 @@ namespace ExperimentOnly
             PgSqlConnection con = new PgSqlConnection("User Id=postgres;Database=login;Port=5432;Initial Schema=public;password=root;Initial Catalog=login;Integrated Security=True");
             con.Open();
         }
-
-        private void runQuery()
-        {
-            string s_id;
-
-            string qry = "select username from public.users where password = '" + Passwordbox.Text + "'";
-
-            dl.getsingleColumnValueByIndex(qry, out s_id, 0);
-
-            if (s_id != null)
-            {
-
-                LogbookDataB sd = new LogbookDataB();
-
-                sd.Show();
-                this.Hide();
-            }
-
-            else
-
-            {
-
-                MessageBox.Show("Password Doesn't Match Please Try Again !", "Error"
-
-                , MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-        }
         
         private void Passwordbox_TextChanged(object sender, EventArgs e)
         {
@@ -137,6 +109,13 @@ namespace ExperimentOnly
         private void AdminLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void HomeButton_Click_1(object sender, EventArgs e)
+        {
+            LandingPage f1 = new LandingPage();
+            f1.Show();
+            this.Hide();
         }
     }
     

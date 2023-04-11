@@ -63,7 +63,7 @@
             this.GroupLogDeets.Controls.Add(this.radioboxgroup);
             this.GroupLogDeets.Location = new System.Drawing.Point(92, 350);
             this.GroupLogDeets.Name = "GroupLogDeets";
-            this.GroupLogDeets.Size = new System.Drawing.Size(479, 271);
+            this.GroupLogDeets.Size = new System.Drawing.Size(479, 285);
             this.GroupLogDeets.TabIndex = 0;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -103,7 +103,7 @@
             // 
             // Clear
             // 
-            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources._2057fcaa_04ef_4599_86c4_021ae3fc073c1;
             this.Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Clear.FlatAppearance.BorderSize = 0;
@@ -114,27 +114,27 @@
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(89, 28);
             this.Clear.TabIndex = 11;
-            this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // HomeButton
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Transparent;
-            this.HomeButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_18;
-            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomeButton.BackgroundImage = global::ExperimentOnly.Properties.Resources._23b37693_a35c_4e9a_90fc_c07ffe8176842;
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.Location = new System.Drawing.Point(2, 243);
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Location = new System.Drawing.Point(181, 257);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(32, 27);
+            this.HomeButton.Size = new System.Drawing.Size(89, 28);
             this.HomeButton.TabIndex = 10;
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // SubmitButton
             // 
-            this.SubmitButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.SubmitButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.bc2ba4c2_4bbb_4256_b8f3_de88f4c9686a2;
             this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SubmitButton.FlatAppearance.BorderSize = 0;
@@ -145,7 +145,6 @@
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(89, 28);
             this.SubmitButton.TabIndex = 9;
-            this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 

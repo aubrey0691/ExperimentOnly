@@ -110,5 +110,15 @@ namespace ExperimentOnly
             this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
 
         }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupLogDeets_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

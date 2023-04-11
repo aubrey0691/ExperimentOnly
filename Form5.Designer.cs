@@ -32,8 +32,8 @@
             this.Passwordbox = new System.Windows.Forms.TextBox();
             this.NewPasswordbox = new System.Windows.Forms.TextBox();
             this.ConfirmPasswordbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Passwordbox
@@ -70,21 +70,6 @@
             this.ConfirmPasswordbox.TextChanged += new System.EventHandler(this.ConfirmPasswordbox_TextChanged);
             this.ConfirmPasswordbox.Validated += new System.EventHandler(this.NewPasswordbox_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(270, 504);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 43);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -98,6 +83,20 @@
             this.button2.TabIndex = 12;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::ExperimentOnly.Properties.Resources._21791dda_5b38_4042_a224_1bcc9dc591cf1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(274, 503);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(238, 43);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ChangePass
             // 
@@ -127,7 +126,7 @@
         private System.Windows.Forms.TextBox Passwordbox;
         private System.Windows.Forms.TextBox NewPasswordbox;
         private System.Windows.Forms.TextBox ConfirmPasswordbox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

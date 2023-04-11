@@ -38,9 +38,11 @@
             // Intern
             // 
             this.Intern.BackColor = System.Drawing.Color.Transparent;
-            this.Intern.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Intern.BackgroundImage")));
+            this.Intern.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_10;
             this.Intern.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Intern.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Intern.FlatAppearance.BorderSize = 0;
+            this.Intern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Intern.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intern.ForeColor = System.Drawing.SystemColors.Window;
             this.Intern.Location = new System.Drawing.Point(172, 354);
@@ -53,9 +55,11 @@
             // Guest
             // 
             this.Guest.BackColor = System.Drawing.Color.Transparent;
-            this.Guest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Guest.BackgroundImage")));
+            this.Guest.BackgroundImage = global::ExperimentOnly.Properties.Resources.Guest;
             this.Guest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Guest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Guest.FlatAppearance.BorderSize = 0;
+            this.Guest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guest.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guest.ForeColor = System.Drawing.SystemColors.Window;
             this.Guest.Location = new System.Drawing.Point(172, 444);
@@ -68,9 +72,11 @@
             // Admin
             // 
             this.Admin.BackColor = System.Drawing.Color.Transparent;
-            this.Admin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Admin.BackgroundImage")));
+            this.Admin.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_9;
             this.Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Admin.FlatAppearance.BorderSize = 0;
+            this.Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.SystemColors.Window;
             this.Admin.Location = new System.Drawing.Point(172, 535);
@@ -109,6 +115,7 @@
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.MinimumSize = new System.Drawing.Size(1240, 720);
             this.Name = "LandingPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LandingPage";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

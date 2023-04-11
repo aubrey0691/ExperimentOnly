@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.AdminLabel = new System.Windows.Forms.Label();
-            this.HomeButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Passwordbox = new System.Windows.Forms.TextBox();
             this.GroupLogDeets.SuspendLayout();
@@ -54,9 +53,9 @@
             // GroupLogDeets
             // 
             this.GroupLogDeets.BackColor = System.Drawing.Color.Transparent;
+            this.GroupLogDeets.Controls.Add(this.HomeButton);
             this.GroupLogDeets.Controls.Add(this.Clear);
             this.GroupLogDeets.Controls.Add(this.AdminLabel);
-            this.GroupLogDeets.Controls.Add(this.HomeButton);
             this.GroupLogDeets.Controls.Add(this.SubmitButton);
             this.GroupLogDeets.Controls.Add(this.Passwordbox);
             this.GroupLogDeets.Location = new System.Drawing.Point(94, 348);
@@ -66,11 +65,29 @@
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.GroupLogDeets_Enter);
             // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Transparent;
+            this.HomeButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_18;
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.Location = new System.Drawing.Point(0, 247);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(32, 27);
+            this.HomeButton.TabIndex = 12;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
+            // 
             // Clear
             // 
+            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Clear.FlatAppearance.BorderSize = 0;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Clear.Location = new System.Drawing.Point(91, 133);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(118, 42);
@@ -92,23 +109,15 @@
             this.AdminLabel.Text = "Admin ";
             this.AdminLabel.Click += new System.EventHandler(this.AdminLabel_Click);
             // 
-            // HomeButton
-            // 
-            this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
-            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HomeButton.Location = new System.Drawing.Point(0, 248);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(28, 26);
-            this.HomeButton.TabIndex = 10;
-            this.HomeButton.UseVisualStyleBackColor = true;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
-            // 
             // SubmitButton
             // 
+            this.SubmitButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.SubmitButton.FlatAppearance.BorderSize = 0;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SubmitButton.Location = new System.Drawing.Point(249, 133);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
@@ -119,10 +128,11 @@
             // 
             // Passwordbox
             // 
+            this.Passwordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Passwordbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Passwordbox.Location = new System.Drawing.Point(47, 92);
             this.Passwordbox.Name = "Passwordbox";
-            this.Passwordbox.Size = new System.Drawing.Size(369, 26);
+            this.Passwordbox.Size = new System.Drawing.Size(369, 19);
             this.Passwordbox.TabIndex = 7;
             this.Passwordbox.Text = "Password";
             this.Passwordbox.UseSystemPasswordChar = true;
@@ -132,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Flat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
             this.Controls.Add(this.GroupLogDeets);
@@ -141,6 +151,7 @@
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.MinimumSize = new System.Drawing.Size(1240, 720);
             this.Name = "AdminLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Login";
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
@@ -153,10 +164,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GroupLogDeets;
-        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.TextBox Passwordbox;
         private System.Windows.Forms.Label AdminLabel;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button HomeButton;
     }
 }

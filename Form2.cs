@@ -14,17 +14,31 @@ using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using NpgsqlTypes;
 using Devart.Data.PostgreSql;
+using System.ComponentModel.Composition;
+using System.Data.OleDb;
+using Microsoft.Office.Interop.Excel;
+using Mysqlx.Crud;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Org.BouncyCastle.Utilities;
+using Mysqlx.Datatypes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+
 
 namespace ExperimentOnly
 {
     public partial class LogDetails : Form
     {
+        PgSqlConnection con = new PgSqlConnection();
+        PgSqlCommand command = new PgSqlCommand();
         string n1;
+        int rm;
+        Datalayer dl;
         public LogDetails()
         {
+            dl = new Datalayer();
             InitializeComponent();
         }
-
+        string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             //group box container
@@ -32,46 +46,103 @@ namespace ExperimentOnly
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            //Log Book Page (form 2) closes and details are recorded in the database.
-           /* string connetionString = null;
-            MySqlConnection cnn;
-            connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3307;";
-            cnn = new MySqlConnection(connetionString);
             try
             {
-                cnn.Open();
-                MessageBox.Show("Connection Open ! ");
-                cnn.Close();
+                //Create SqlConnection
+                PgSqlConnection con = new PgSqlConnection(cs);
+                PgSqlCommand cmd = new PgSqlCommand("insert into logbookdt(date,time,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
+                DateTime aDate = DateTime.Now;
+                DateTime aTime = DateTime.Now;
+                aDate.ToString("MM/dd/yyyy");
+                aTime.ToString("HH:mm:ss");
+                string scolor = "";
+                if (TimeOut.Checked)
+                {
+                    scolor = TimeOut.Text;
+                }
+
+                if (TimeIn.Checked)
+                {
+                    scolor = TimeIn.Text;
+                }
+
+                cmd.Parameters.AddWithValue("@date", aDate);
+                cmd.Parameters.AddWithValue("@time", aTime);
+                cmd.Parameters.AddWithValue("@time_state", scolor);
+                cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
+                cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
+                cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
+                cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
+                cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
+                cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
+                cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
+                con.Open();
+                PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                con.Close();
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
+                {
+                    MessageBox.Show("Successful!");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Failed!");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
-            string constr = @"server=127.0.0.1;port=5432;user = postgres;password=root;Database=login;";
-            
-            using (PgSqlConnection con = new PgSqlConnection(constr))
-            {
-                using (PgSqlCommand cmd = new PgSqlCommand("INSERT INTO Logbook(First Name, Middle Initial, Last Name, Time in/Time out, Purpose, Email, Affiliation) " +
-                    "VALUES(@honorifics, @firstname, @middleinitial, @lastname, @timeinout, @purpose, @email, @affiliation)"))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
+                MessageBox.Show(ex.Message);
+            }
+            /* try
+             {
+                 con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Internship\\Documents\\logdatabase.accdb";
+                 con.Open();
+                 command = new OleDbCommand("insert into logdata (Time_State,First_Name, Middle_Initial, Last_Name, Purpose, Email, Affiliation)" +
+                        "values (@honorifics, @firstname, @middleinitial, @lastname, @timeinout, @purpose, @email, @affiliation)", con);
+                 rm = command.ExecuteNonQuery();
+                 MessageBox.Show("Log Inserted!");
+             }
+             catch (Exception ex)
+             { 
+                 MessageBox.Show("Log Can't Be Inserted!");
+             }*/
 
+            //Log Book Page (form 2) closes and details are recorded in the database.
+            /*string connetionString = null;
+             MySqlConnection cnn;
+             connetionString = "server=127.0.0.1;database=lbdatabase;uid=root;port=3307;";
+             cnn = new MySqlConnection(connetionString);
+             try
+             {
+                 cnn.Open();
+                 MessageBox.Show("Connection Open ! ");
+                 cnn.Close();
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Can not open connection ! ");
+             }*/
+
+            /*string constr = @"server=127.0.0.1;port=5432;user = postgres;password=root;Database=login;";
+            PgSqlConnection con = new PgSqlConnection(constr);
+            con.Open();
+            PgSqlCommand cmd = new PgSqlCommand("insert into logbookdata(time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@time_state", "test");
                     cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
-                    cmd.Parameters.AddWithValue("@firstname", FirstNamebox.Text);
-                    cmd.Parameters.AddWithValue("@middleinitial", MiddleInitialbox.Text);
-                    cmd.Parameters.AddWithValue("@lastname", LastNamebox.Text);
-                    cmd.Parameters.AddWithValue("@timeinout", n1);
+                    cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
+                    cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
+                    cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
                     cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
                     cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
                     cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
-                    con.Open();
-                    int i = cmd.ExecuteNonQuery();
-
-                    con.Close();
-                } 
-
-            }
-
+                    cmd.ExecuteNonQuery();
+                    con.Close();*/
 
         }
 
@@ -84,6 +155,13 @@ namespace ExperimentOnly
 
         private void LogDetails_Load(object sender, EventArgs e)
         {
+            PgSqlConnection con = new PgSqlConnection("User Id=postgres;Database=login;Port=5432;Initial Schema=public;password=root;Integrated Security=True");
+            
+        }
+        
+        private void GetDate(object sender, EventArgs e)
+        {
+            DateTime aDate = DateTime.Now;
 
         }
 
@@ -152,28 +230,18 @@ namespace ExperimentOnly
 
         private void TimeOut_CheckedChanged(object sender, EventArgs e)
         {
-            var radioFired = (RadioButton)sender;
-            Check(radioFired.Name);
+            
         }
 
         private void TimeIn_CheckedChanged(object sender, EventArgs e)
         {
-            var radioFired = (RadioButton)sender;
-            Check(radioFired.Name);
+            
         }
 
         public void Check(string radioName)
         {
             
-            switch (radioName)
-            {
-                case "radio1a":
-                    n1 = "Time in";
-                    break;
-                case "radio1b":
-                    n1 = "Time out";
-                    break; 
-         }
+            
         }
 
 

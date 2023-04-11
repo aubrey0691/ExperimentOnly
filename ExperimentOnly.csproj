@@ -57,6 +57,9 @@
     <StartupObject>ExperimentOnly.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -81,7 +84,12 @@
     <Reference Include="Devart.Data.PostgreSql.Entity.EFCore.Design, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <HintPath>packages\Devart.Data.PostgreSql.EFCore.Design.8.1.134\lib\netstandard1.3\Devart.Data.PostgreSql.Entity.EFCore.Design.dll</HintPath>
     </Reference>
+    <Reference Include="Devart.Data.PostgreSql.Entity.EFCore.NetTopologySuite, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Entity.Migrations.EF5, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Entity.Spatials.EF6, Version=8.1.134.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Synchronization, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.PostgreSql.Vs.14, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Web, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.Synchronization, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.Vs.14, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -157,11 +165,22 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.interop.access.dao, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.ADONETDest, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ADONETSrc, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Data.Tools.ExceptionMessageBox, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Data.Tools.Package.SqlProfile, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Data.Tools.SqlObjectExplorer, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
       <Private>True</Private>
@@ -214,13 +233,17 @@
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.OleDb, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.OleDb.7.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Device" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -407,17 +430,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2 - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2 - Copy.Designer.cs">
+      <DependentUpon>Form2 - Copy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
@@ -425,36 +448,98 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4 - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4 - Copy.Designer.cs">
+      <DependentUpon>Form4 - Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form5.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginDataSet1.Designer.cs">
+    <Compile Include="addlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addlog.Designer.cs">
+      <DependentUpon>addlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="servernpg.cs" />
+    <EmbeddedResource Include="addlog.resx">
+      <DependentUpon>addlog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2 - Copy.resx">
+      <DependentUpon>Form2 - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4 - Copy.resx">
+      <DependentUpon>Form4 - Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -465,16 +550,71 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="loginDataSet1.xsc">
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+    <None Include="loginDataSet11.xsc">
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="loginDataSet1.xsd">
+    <None Include="loginDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>loginDataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="loginDataSet1.xss">
-      <DependentUpon>loginDataSet1.xsd</DependentUpon>
+    <None Include="loginDataSet11.xss">
+      <DependentUpon>loginDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet2.xsc">
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet2.xss">
+      <DependentUpon>loginDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet21.xsc">
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet21.xss">
+      <DependentUpon>loginDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet3.xsc">
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet3.xss">
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet4.xsc">
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet4.xss">
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet5.xsc">
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet5.xss">
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -501,6 +641,132 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changepass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon-white-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b8633542-aa99-450b-8cf5-27f889ec8387.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d834f0a7-fb6d-48c2-aae6-b3f4dd1a6be6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8db97a4a-6546-4a63-8866-bb9023f59b49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21791dda-5b38-4042-a224-1bcc9dc591cf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b58bb27f-98dd-4002-ba3e-6c897898b46b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91810ab9-380f-4b5c-bd3b-9913493126d8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a54bec2b-e8b5-4be3-bcbe-1e0e534c7e3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1758c78e-e16a-499f-81ba-2baa637c6268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60acf174-6dfd-4dde-b990-61bfe8edc378.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60acf174-6dfd-4dde-b990-61bfe8edc3781.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23b37693-a35c-4e9a-90fc-c07ffe817684.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deda97a5-fd5c-402f-90ee-0f132417dda6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deda97a5-fd5c-402f-90ee-0f132417dda61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logs %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc2ba4c2-4bbb-4256-b8f3-de88f4c9686a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2057fcaa-04ef-4599-86c4-021ae3fc073c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UC Seal - High Quality.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

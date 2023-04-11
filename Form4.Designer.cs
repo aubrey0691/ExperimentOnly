@@ -29,351 +29,377 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogbookDataB));
+            this.Addbutt = new System.Windows.Forms.Button();
+            this.Exportbutt = new System.Windows.Forms.Button();
+            this.Changebutt = new System.Windows.Forms.Button();
+            this.Clearbutt = new System.Windows.Forms.Button();
+            this.Guestbutt = new System.Windows.Forms.Button();
+            this.Internbutt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.Filterbox = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.logbookdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logbookDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timestateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.honorificsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleinitialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purposeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.affiliationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
+            this.button3 = new System.Windows.Forms.Button();
+            this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataSet1 = new ExperimentOnly.loginDataSet();
+            this.logbookdtBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataSet = new ExperimentOnly.loginDataSet();
+            this.logbookdtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logbookdtTableAdapter = new ExperimentOnly.loginDataSetTableAdapters.logbookdtTableAdapter();
+            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Addbutt
+            // 
+            this.Addbutt.BackColor = System.Drawing.Color.Transparent;
+            this.Addbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.b58bb27f_98dd_4002_ba3e_6c897898b46b;
+            this.Addbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Addbutt.FlatAppearance.BorderSize = 0;
+            this.Addbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Addbutt.Location = new System.Drawing.Point(12, 188);
+            this.Addbutt.Name = "Addbutt";
+            this.Addbutt.Size = new System.Drawing.Size(317, 58);
+            this.Addbutt.TabIndex = 0;
+            this.Addbutt.UseVisualStyleBackColor = false;
+            this.Addbutt.Click += new System.EventHandler(this.Addbutt_Click);
+            // 
+            // Exportbutt
+            // 
+            this.Exportbutt.BackColor = System.Drawing.Color.Transparent;
+            this.Exportbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._8db97a4a_6546_4a63_8866_bb9023f59b49;
+            this.Exportbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Exportbutt.FlatAppearance.BorderSize = 0;
+            this.Exportbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exportbutt.Location = new System.Drawing.Point(12, 261);
+            this.Exportbutt.Name = "Exportbutt";
+            this.Exportbutt.Size = new System.Drawing.Size(317, 58);
+            this.Exportbutt.TabIndex = 1;
+            this.Exportbutt.UseVisualStyleBackColor = false;
+            this.Exportbutt.Click += new System.EventHandler(this.Exportbutt_Click);
+            // 
+            // Changebutt
+            // 
+            this.Changebutt.BackColor = System.Drawing.Color.Transparent;
+            this.Changebutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._21791dda_5b38_4042_a224_1bcc9dc591cf;
+            this.Changebutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Changebutt.FlatAppearance.BorderSize = 0;
+            this.Changebutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Changebutt.Location = new System.Drawing.Point(12, 334);
+            this.Changebutt.Name = "Changebutt";
+            this.Changebutt.Size = new System.Drawing.Size(317, 58);
+            this.Changebutt.TabIndex = 2;
+            this.Changebutt.UseVisualStyleBackColor = false;
+            this.Changebutt.Click += new System.EventHandler(this.Changebutt_Click);
+            // 
+            // Clearbutt
+            // 
+            this.Clearbutt.BackColor = System.Drawing.Color.Transparent;
+            this.Clearbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.b8633542_aa99_450b_8cf5_27f889ec8387;
+            this.Clearbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Clearbutt.FlatAppearance.BorderSize = 0;
+            this.Clearbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clearbutt.Location = new System.Drawing.Point(12, 407);
+            this.Clearbutt.Name = "Clearbutt";
+            this.Clearbutt.Size = new System.Drawing.Size(317, 58);
+            this.Clearbutt.TabIndex = 3;
+            this.Clearbutt.UseVisualStyleBackColor = false;
+            this.Clearbutt.Click += new System.EventHandler(this.Clearbutt_Click);
+            // 
+            // Guestbutt
+            // 
+            this.Guestbutt.BackColor = System.Drawing.Color.Transparent;
+            this.Guestbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources._91810ab9_380f_4b5c_bd3b_9913493126d8;
+            this.Guestbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Guestbutt.FlatAppearance.BorderSize = 0;
+            this.Guestbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Guestbutt.Location = new System.Drawing.Point(12, 481);
+            this.Guestbutt.Name = "Guestbutt";
+            this.Guestbutt.Size = new System.Drawing.Size(155, 58);
+            this.Guestbutt.TabIndex = 4;
+            this.Guestbutt.UseVisualStyleBackColor = false;
+            this.Guestbutt.Click += new System.EventHandler(this.Guestbutt_Click);
+            // 
+            // Internbutt
+            // 
+            this.Internbutt.BackColor = System.Drawing.Color.Transparent;
+            this.Internbutt.BackgroundImage = global::ExperimentOnly.Properties.Resources.a54bec2b_e8b5_4be3_bcbe_1e0e534c7e3d;
+            this.Internbutt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Internbutt.FlatAppearance.BorderSize = 0;
+            this.Internbutt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Internbutt.Location = new System.Drawing.Point(173, 481);
+            this.Internbutt.Name = "Internbutt";
+            this.Internbutt.Size = new System.Drawing.Size(155, 58);
+            this.Internbutt.TabIndex = 5;
+            this.Internbutt.UseVisualStyleBackColor = false;
+            this.Internbutt.Click += new System.EventHandler(this.Internbutt_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImage = global::ExperimentOnly.Properties.Resources._1758c78e_e16a_499f_81ba_2baa637c6268;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(21, 202);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(17, 559);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(299, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 37);
+            this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImage = global::ExperimentOnly.Properties.Resources._60acf174_6dfd_4dde_b990_61bfe8edc3781;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(21, 277);
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(230, 559);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(299, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 37);
+            this.button2.TabIndex = 7;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MintCream;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.timestateDataGridViewTextBoxColumn,
+            this.honorificsDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.middleinitialDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.purposeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.affiliationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.logbookdtBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(343, 96);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(881, 585);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // timestateDataGridViewTextBoxColumn
+            // 
+            this.timestateDataGridViewTextBoxColumn.DataPropertyName = "time_state";
+            this.timestateDataGridViewTextBoxColumn.HeaderText = "time_state";
+            this.timestateDataGridViewTextBoxColumn.Name = "timestateDataGridViewTextBoxColumn";
+            // 
+            // honorificsDataGridViewTextBoxColumn
+            // 
+            this.honorificsDataGridViewTextBoxColumn.DataPropertyName = "honorifics";
+            this.honorificsDataGridViewTextBoxColumn.HeaderText = "honorifics";
+            this.honorificsDataGridViewTextBoxColumn.Name = "honorificsDataGridViewTextBoxColumn";
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // middleinitialDataGridViewTextBoxColumn
+            // 
+            this.middleinitialDataGridViewTextBoxColumn.DataPropertyName = "middle_initial";
+            this.middleinitialDataGridViewTextBoxColumn.HeaderText = "middle_initial";
+            this.middleinitialDataGridViewTextBoxColumn.Name = "middleinitialDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // purposeDataGridViewTextBoxColumn
+            // 
+            this.purposeDataGridViewTextBoxColumn.DataPropertyName = "purpose";
+            this.purposeDataGridViewTextBoxColumn.HeaderText = "purpose";
+            this.purposeDataGridViewTextBoxColumn.Name = "purposeDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // affiliationDataGridViewTextBoxColumn
+            // 
+            this.affiliationDataGridViewTextBoxColumn.DataPropertyName = "affiliation";
+            this.affiliationDataGridViewTextBoxColumn.HeaderText = "affiliation";
+            this.affiliationDataGridViewTextBoxColumn.Name = "affiliationDataGridViewTextBoxColumn";
+            // 
+            // logbookdtBindingSource3
+            // 
+            this.logbookdtBindingSource3.DataMember = "logbookdt";
+            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
+            // 
+            // loginDataSet3
+            // 
+            this.loginDataSet3.DataSetName = "loginDataSet3";
+            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::ExperimentOnly.Properties.Resources._23b37693_a35c_4e9a_90fc_c07ffe817684;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(21, 352);
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(124, 559);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(299, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 37);
+            this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // logbookdtBindingSource2
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(21, 427);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(299, 53);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.logbookdtBindingSource2.DataMember = "logbookdt";
+            this.logbookdtBindingSource2.DataSource = this.loginDataSet1;
             // 
-            // button5
+            // loginDataSet1
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(21, 504);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(299, 53);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
+            this.loginDataSet1.DataSetName = "loginDataSet";
+            this.loginDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Filterbox
+            // logbookdtBindingSource1
             // 
-            this.Filterbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Filterbox.Location = new System.Drawing.Point(552, 34);
-            this.Filterbox.Name = "Filterbox";
-            this.Filterbox.Size = new System.Drawing.Size(369, 26);
-            this.Filterbox.TabIndex = 8;
+            this.logbookdtBindingSource1.DataMember = "logbookdt";
+            this.logbookdtBindingSource1.DataSource = this.loginDataSet1;
             // 
-            // button6
+            // loginDataSet
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Location = new System.Drawing.Point(21, 352);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(299, 53);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
+            this.loginDataSet.DataSetName = "loginDataSet";
+            this.loginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button7
+            // logbookdtBindingSource
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(21, 504);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(299, 53);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = false;
+            this.logbookdtBindingSource.DataMember = "logbookdt";
+            this.logbookdtBindingSource.DataSource = this.loginDataSet1;
             // 
-            // logbookdataBindingSource
+            // logbookdtTableAdapter
             // 
-            this.logbookdataBindingSource.DataMember = "logbookdata";
-            this.logbookdataBindingSource.DataSource = this.logbookDataSet1BindingSource;
+            this.logbookdtTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigator1
+            // logbookdtTableAdapter1
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1224, 25);
-            this.bindingNavigator1.TabIndex = 14;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
-            "Date",
-            "Time",
-            "Time State",
-            "Honorifics",
-            "First Name",
-            "Last Name",
-            "Purpose",
-            "Email",
-            "Affiliation"});
-            this.listBox1.Location = new System.Drawing.Point(801, 66);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 20);
-            this.listBox1.TabIndex = 15;
+            this.logbookdtTableAdapter1.ClearBeforeFill = true;
             // 
             // LogbookDataB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Logs__3_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Filterbox);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Internbutt);
+            this.Controls.Add(this.Guestbutt);
+            this.Controls.Add(this.Clearbutt);
+            this.Controls.Add(this.Changebutt);
+            this.Controls.Add(this.Exportbutt);
+            this.Controls.Add(this.Addbutt);
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.MinimumSize = new System.Drawing.Size(1240, 720);
             this.Name = "LogbookDataB";
-            this.Text = "Database";
-            this.Load += new System.EventHandler(this.Database_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LogBook";
+            this.Load += new System.EventHandler(this.LogbookDataB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button Addbutt;
+        private System.Windows.Forms.Button Exportbutt;
+        private System.Windows.Forms.Button Changebutt;
+        private System.Windows.Forms.Button Clearbutt;
+        private System.Windows.Forms.Button Guestbutt;
+        private System.Windows.Forms.Button Internbutt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox Filterbox;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource logbookdataBindingSource;
+        private loginDataSet loginDataSet;
+        private loginDataSet loginDataSet1;
+        private System.Windows.Forms.BindingSource logbookdtBindingSource;
+        private loginDataSetTableAdapters.logbookdtTableAdapter logbookdtTableAdapter;
+        private System.Windows.Forms.BindingSource logbookdtBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timestateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn honorificsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middleInitialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeInTimeOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleinitialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn affiliationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.BindingSource bindingSource2;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.BindingSource logbookDataSet1BindingSource;
-        
-        private System.Windows.Forms.BindingSource logbookdataBindingSource;
-        private System.Windows.Forms.ListBox listBox1;
-   
-       
+        private System.Windows.Forms.BindingSource logbookdtBindingSource2;
+        private loginDataSet3 loginDataSet3;
+        private System.Windows.Forms.BindingSource logbookdtBindingSource3;
+        private loginDataSet3TableAdapters.logbookdtTableAdapter logbookdtTableAdapter1;
+        private System.Windows.Forms.Button button3;
     }
 }

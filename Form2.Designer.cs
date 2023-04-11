@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogDetails));
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
             this.FirstNamebox = new System.Windows.Forms.TextBox();
             this.Honorificsbox = new System.Windows.Forms.TextBox();
@@ -38,12 +37,12 @@
             this.SubmitButton = new System.Windows.Forms.Button();
             this.Affiliationbox = new System.Windows.Forms.TextBox();
             this.EmailAddbox = new System.Windows.Forms.TextBox();
-            this.TimeOut = new System.Windows.Forms.RadioButton();
-            this.TimeIn = new System.Windows.Forms.RadioButton();
             this.Purposebox = new System.Windows.Forms.TextBox();
             this.MiddleInitialbox = new System.Windows.Forms.TextBox();
-            this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.radioboxgroup = new System.Windows.Forms.GroupBox();
+            this.TimeIn = new System.Windows.Forms.RadioButton();
+            this.TimeOut = new System.Windows.Forms.RadioButton();
+            this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.GroupLogDeets.SuspendLayout();
             this.radioboxgroup.SuspendLayout();
             this.SuspendLayout();
@@ -62,49 +61,56 @@
             this.GroupLogDeets.Controls.Add(this.Purposebox);
             this.GroupLogDeets.Controls.Add(this.MiddleInitialbox);
             this.GroupLogDeets.Controls.Add(this.radioboxgroup);
-            this.GroupLogDeets.Location = new System.Drawing.Point(95, 350);
+            this.GroupLogDeets.Location = new System.Drawing.Point(92, 339);
             this.GroupLogDeets.Name = "GroupLogDeets";
-            this.GroupLogDeets.Size = new System.Drawing.Size(476, 271);
+            this.GroupLogDeets.Size = new System.Drawing.Size(479, 303);
             this.GroupLogDeets.TabIndex = 0;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // FirstNamebox
             // 
+            this.FirstNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FirstNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNamebox.Location = new System.Drawing.Point(249, 17);
+            this.FirstNamebox.Location = new System.Drawing.Point(259, 27);
             this.FirstNamebox.Name = "FirstNamebox";
-            this.FirstNamebox.Size = new System.Drawing.Size(165, 26);
+            this.FirstNamebox.Size = new System.Drawing.Size(165, 19);
             this.FirstNamebox.TabIndex = 14;
             this.FirstNamebox.Text = "First Name";
             this.FirstNamebox.TextChanged += new System.EventHandler(this.FirstNamebox_TextChanged);
             // 
             // Honorificsbox
             // 
+            this.Honorificsbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Honorificsbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Honorificsbox.Location = new System.Drawing.Point(45, 17);
+            this.Honorificsbox.Location = new System.Drawing.Point(55, 27);
             this.Honorificsbox.Name = "Honorificsbox";
-            this.Honorificsbox.Size = new System.Drawing.Size(165, 26);
+            this.Honorificsbox.Size = new System.Drawing.Size(165, 19);
             this.Honorificsbox.TabIndex = 13;
             this.Honorificsbox.Text = "Honorifics";
             this.Honorificsbox.TextChanged += new System.EventHandler(this.Honorificsbox_TextChanged);
             // 
             // LastNamebox
             // 
+            this.LastNamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LastNamebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNamebox.Location = new System.Drawing.Point(249, 49);
+            this.LastNamebox.Location = new System.Drawing.Point(259, 59);
             this.LastNamebox.Name = "LastNamebox";
-            this.LastNamebox.Size = new System.Drawing.Size(165, 26);
+            this.LastNamebox.Size = new System.Drawing.Size(165, 19);
             this.LastNamebox.TabIndex = 12;
             this.LastNamebox.Text = "Last Name";
             this.LastNamebox.TextChanged += new System.EventHandler(this.LastNamebox_TextChanged);
             // 
             // Clear
             // 
+            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Clear.FlatAppearance.BorderSize = 0;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.Location = new System.Drawing.Point(121, 216);
+            this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Clear.Location = new System.Drawing.Point(131, 226);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(89, 28);
             this.Clear.TabIndex = 11;
@@ -114,22 +120,28 @@
             // 
             // HomeButton
             // 
-            this.HomeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeButton.BackgroundImage")));
+            this.HomeButton.BackColor = System.Drawing.Color.Transparent;
+            this.HomeButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_18;
             this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HomeButton.Location = new System.Drawing.Point(0, 251);
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.Location = new System.Drawing.Point(12, 253);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(27, 23);
+            this.HomeButton.Size = new System.Drawing.Size(32, 27);
             this.HomeButton.TabIndex = 10;
-            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // SubmitButton
             // 
+            this.SubmitButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.SubmitButton.FlatAppearance.BorderSize = 0;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(242, 216);
+            this.SubmitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubmitButton.Location = new System.Drawing.Point(252, 226);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(89, 28);
             this.SubmitButton.TabIndex = 9;
@@ -139,69 +151,89 @@
             // 
             // Affiliationbox
             // 
+            this.Affiliationbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Affiliationbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Affiliationbox.Location = new System.Drawing.Point(45, 175);
+            this.Affiliationbox.Location = new System.Drawing.Point(55, 185);
             this.Affiliationbox.Name = "Affiliationbox";
-            this.Affiliationbox.Size = new System.Drawing.Size(369, 26);
+            this.Affiliationbox.Size = new System.Drawing.Size(369, 19);
             this.Affiliationbox.TabIndex = 7;
             this.Affiliationbox.Text = "Affiliation";
             this.Affiliationbox.TextChanged += new System.EventHandler(this.Affiliationbox_TextChanged);
             // 
             // EmailAddbox
             // 
+            this.EmailAddbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmailAddbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailAddbox.Location = new System.Drawing.Point(45, 143);
+            this.EmailAddbox.Location = new System.Drawing.Point(55, 153);
             this.EmailAddbox.Name = "EmailAddbox";
-            this.EmailAddbox.Size = new System.Drawing.Size(369, 26);
+            this.EmailAddbox.Size = new System.Drawing.Size(369, 19);
             this.EmailAddbox.TabIndex = 5;
             this.EmailAddbox.Text = "E-mail Address";
             this.EmailAddbox.TextChanged += new System.EventHandler(this.EmailAddbox_TextChanged);
             // 
-            // TimeOut
-            // 
-            this.TimeOut.AutoSize = true;
-            this.TimeOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeOut.Location = new System.Drawing.Point(240, 9);
-            this.TimeOut.Name = "TimeOut";
-            this.TimeOut.Size = new System.Drawing.Size(89, 24);
-            this.TimeOut.TabIndex = 4;
-            this.TimeOut.TabStop = true;
-            this.TimeOut.Text = "Time Out";
-            this.TimeOut.UseVisualStyleBackColor = true;
-            this.TimeOut.CheckedChanged += new System.EventHandler(this.TimeOut_CheckedChanged);
-            // 
-            // TimeIn
-            // 
-            this.TimeIn.AutoSize = true;
-            this.TimeIn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeIn.Location = new System.Drawing.Point(36, 8);
-            this.TimeIn.Name = "TimeIn";
-            this.TimeIn.Size = new System.Drawing.Size(76, 24);
-            this.TimeIn.TabIndex = 3;
-            this.TimeIn.TabStop = true;
-            this.TimeIn.Text = "Time In";
-            this.TimeIn.UseVisualStyleBackColor = true;
-            this.TimeIn.CheckedChanged += new System.EventHandler(this.TimeIn_CheckedChanged);
-            // 
             // Purposebox
             // 
+            this.Purposebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Purposebox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Purposebox.Location = new System.Drawing.Point(45, 81);
+            this.Purposebox.Location = new System.Drawing.Point(55, 91);
             this.Purposebox.Name = "Purposebox";
-            this.Purposebox.Size = new System.Drawing.Size(369, 26);
+            this.Purposebox.Size = new System.Drawing.Size(369, 19);
             this.Purposebox.TabIndex = 2;
             this.Purposebox.Text = "Purpose";
             this.Purposebox.TextChanged += new System.EventHandler(this.Purposebox_TextChanged);
             // 
             // MiddleInitialbox
             // 
+            this.MiddleInitialbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MiddleInitialbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiddleInitialbox.Location = new System.Drawing.Point(45, 49);
+            this.MiddleInitialbox.Location = new System.Drawing.Point(55, 59);
             this.MiddleInitialbox.Name = "MiddleInitialbox";
-            this.MiddleInitialbox.Size = new System.Drawing.Size(165, 26);
+            this.MiddleInitialbox.Size = new System.Drawing.Size(165, 19);
             this.MiddleInitialbox.TabIndex = 0;
             this.MiddleInitialbox.Text = "Middle Initial";
             this.MiddleInitialbox.TextChanged += new System.EventHandler(this.MiddleInitialbox_TextChanged);
+            // 
+            // radioboxgroup
+            // 
+            this.radioboxgroup.Controls.Add(this.TimeIn);
+            this.radioboxgroup.Controls.Add(this.TimeOut);
+            this.radioboxgroup.Cursor = System.Windows.Forms.Cursors.Default;
+            this.radioboxgroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioboxgroup.Location = new System.Drawing.Point(55, 111);
+            this.radioboxgroup.Name = "radioboxgroup";
+            this.radioboxgroup.Size = new System.Drawing.Size(369, 38);
+            this.radioboxgroup.TabIndex = 15;
+            this.radioboxgroup.TabStop = false;
+            this.radioboxgroup.Enter += new System.EventHandler(this.radioboxgroup_Enter);
+            // 
+            // TimeIn
+            // 
+            this.TimeIn.AutoSize = true;
+            this.TimeIn.FlatAppearance.BorderSize = 0;
+            this.TimeIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TimeIn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeIn.Location = new System.Drawing.Point(36, 8);
+            this.TimeIn.Name = "TimeIn";
+            this.TimeIn.Size = new System.Drawing.Size(75, 24);
+            this.TimeIn.TabIndex = 3;
+            this.TimeIn.TabStop = true;
+            this.TimeIn.Text = "Time In";
+            this.TimeIn.UseVisualStyleBackColor = true;
+            this.TimeIn.CheckedChanged += new System.EventHandler(this.TimeIn_CheckedChanged);
+            // 
+            // TimeOut
+            // 
+            this.TimeOut.AutoSize = true;
+            this.TimeOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TimeOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeOut.Location = new System.Drawing.Point(240, 9);
+            this.TimeOut.Name = "TimeOut";
+            this.TimeOut.Size = new System.Drawing.Size(88, 24);
+            this.TimeOut.TabIndex = 4;
+            this.TimeOut.TabStop = true;
+            this.TimeOut.Text = "Time Out";
+            this.TimeOut.UseVisualStyleBackColor = true;
+            this.TimeOut.CheckedChanged += new System.EventHandler(this.TimeOut_CheckedChanged);
             // 
             // LogbookFormLabel
             // 
@@ -216,22 +248,11 @@
             this.LogbookFormLabel.Text = "Logbook \r\nForm";
             this.LogbookFormLabel.Click += new System.EventHandler(this.LogbookFormlabel_Click);
             // 
-            // radioboxgroup
-            // 
-            this.radioboxgroup.Controls.Add(this.TimeIn);
-            this.radioboxgroup.Controls.Add(this.TimeOut);
-            this.radioboxgroup.Location = new System.Drawing.Point(45, 104);
-            this.radioboxgroup.Name = "radioboxgroup";
-            this.radioboxgroup.Size = new System.Drawing.Size(369, 38);
-            this.radioboxgroup.TabIndex = 15;
-            this.radioboxgroup.TabStop = false;
-            this.radioboxgroup.Enter += new System.EventHandler(this.radioboxgroup_Enter);
-            // 
             // LogDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ExperimentOnly.Properties.Resources.Flat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1224, 681);
             this.Controls.Add(this.LogbookFormLabel);
@@ -240,6 +261,7 @@
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.MinimumSize = new System.Drawing.Size(1240, 720);
             this.Name = "LogDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guest/Intern Log";
             this.Load += new System.EventHandler(this.LogDetails_Load);
             this.GroupLogDeets.ResumeLayout(false);

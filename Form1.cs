@@ -44,8 +44,8 @@ namespace ExperimentOnly
 
         private void Guest_Click_3(object sender, EventArgs e)
         {
-            LogDetails f2 = new LogDetails();
-            f2.Show();
+            GuestLogDetails f22 = new GuestLogDetails();
+            f22.Show();
             this.Hide();
         }
 

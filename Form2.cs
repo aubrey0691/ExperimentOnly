@@ -136,6 +136,7 @@ namespace ExperimentOnly
 
         private void Clear_Click(object sender, EventArgs e)
         {
+           
             Honorificsbox.Clear();
             FirstNamebox.Clear();
             MiddleInitialbox.Clear();
@@ -184,7 +185,5 @@ namespace ExperimentOnly
         }
 
      
-
-        
     }
 }

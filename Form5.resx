@@ -117,30 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHcAAAATCAYAAACqXJLGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAA1RJREFUaEPt1W2xHDcQhWFTMIVQMAVTCIVQCAVTMIVQMIVQCIVQuJlnndfVVmnu
-        3vIfe7fmVJ3aUau/W9K+e3l5ufik3AovPge3whN+Pgi7vYu/Br+b0br520EK/xyEfw/6/njwUYf76aA6
-        gnr+OLjTfXSeDvf3g6ARGqIBfx786+D7g4863PJWD6oH1LbTf2Ruh/uB5IDCk6189OFO2d8H3eApewZu
-        h9tpdkOTrczQE/3l6+etQW58Og5Je9Ctnz7su0FsvRJkU6dXoqeUD7cMznT4FLv9yfI+k93L2Xf74s0n
-        XV7l4MD4W1OX72kPYibTQ6h3M4ddT6zrm/3s+BEP7OfjZpcxBRutd6whnCuqAUGN9as59hrILCof7Oh4
-        /mHqaMyM0cGDdOTKhyI7bGxmQ2Ixp4xtA7iXc7e8/RprDf2F+RW/eOWSHh/5rG464stdnGK0Tp9PMpAr
-        mw6I2tkVF252GcMsaMeMGyT6BslO3SgRSbXOhxOerMH41jiogVGhMHVmHpoEGpMsFlMDUDxYY8Q1Z2Az
-        dXBXC663km35l7N1Pqt/HsxqlK91sWbO2bXG2advw6WkqNY7FmCVg73WNZDP0N7Ox5Sdxdjp7GDvzBbk
-        JDcDmDqv5WwPur3JDTX9blN75N1kMJRk7CBf5Gvvs6ueWX/c2X2nl3B3elbuAiCURM+aInouId2djyk7
-        i7HT4X/leotW2x3v5YzkGgn8Jdcv9gYP9MjpknUD6bFzszos9Rp+ZLjwpuFKClblyV0AhJJYT5NvaL3z
-        MWUVPp8f3D3Lq84Zz/KO93KePNtbh1EdDkq+6zEZZut7vVhrjbsa2M3/8WRwW88NJxcY+JagUyk5N+Ks
-        SVBRbCXKNn+Q7s7HKsuH2PyUMKRj2HTKE8th5Vne8V7O6i8G3QYjv3LMzre9hg3zEIoD7JI19G61PXrF
-        wV0NHQB67NKBm85URoEol0TFvHW4/nfYALuK7lTufKwyuhoqB+RjvTF02JVnzZinP57lHV/LGcnCjGEI
-        2fmdA0O68pqycln/Puo7VPOs5ayGDhzokRzgtr8q/6p0qnG3d/GEW+FPplPqBDqV2Il+63/sxf+5Ff5k
-        epJ6asBwPVs73YuvcCu8+BzcCi8+A1/e/QexWBQhMruWYwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAycAAALHCAYAAACUmj2fAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

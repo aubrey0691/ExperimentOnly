@@ -51,10 +51,6 @@
             this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
             this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
-            this.IDbox = new System.Windows.Forms.TextBox();
-            this.Clear = new System.Windows.Forms.Button();
-            this.DeleteButton = new System.Windows.Forms.Button();
-            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,6 +60,13 @@
             this.Changebutt = new System.Windows.Forms.Button();
             this.Exportbutt = new System.Windows.Forms.Button();
             this.Addbutt = new System.Windows.Forms.Button();
+            this.IDbox = new System.Windows.Forms.TextBox();
+            this.Clear = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
+            this.loginDataSet5 = new ExperimentOnly.loginDataSet5();
+            this.logbookdtBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.logbookdtTableAdapter2 = new ExperimentOnly.loginDataSet5TableAdapters.logbookdtTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).BeginInit();
@@ -74,6 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
             this.GroupLogDeets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // logbookdtBindingSource1
@@ -117,7 +122,7 @@
             this.purposeDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.affiliationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.logbookdtBindingSource3;
+            this.dataGridView1.DataSource = this.logbookdtBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(343, 96);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -227,54 +232,6 @@
             this.GroupLogDeets.TabIndex = 16;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.GroupLogDeets_Enter);
-            // 
-            // IDbox
-            // 
-            this.IDbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDbox.Location = new System.Drawing.Point(34, 423);
-            this.IDbox.Name = "IDbox";
-            this.IDbox.Size = new System.Drawing.Size(261, 26);
-            this.IDbox.TabIndex = 13;
-            this.IDbox.Text = "ID";
-            this.IDbox.TextChanged += new System.EventHandler(this.IDbox_TextChanged);
-            // 
-            // Clear
-            // 
-            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
-            this.Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Clear.FlatAppearance.BorderSize = 0;
-            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Clear.Location = new System.Drawing.Point(32, 454);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(89, 28);
-            this.Clear.TabIndex = 11;
-            this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
-            this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteButton.FlatAppearance.BorderSize = 0;
-            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DeleteButton.Location = new System.Drawing.Point(210, 454);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(89, 28);
-            this.DeleteButton.TabIndex = 9;
-            this.DeleteButton.Text = "Delete";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-            // 
-            // logbookdtTableAdapter1
-            // 
-            this.logbookdtTableAdapter1.ClearBeforeFill = true;
             // 
             // button3
             // 
@@ -393,6 +350,68 @@
             this.Addbutt.TabIndex = 14;
             this.Addbutt.UseVisualStyleBackColor = false;
             // 
+            // IDbox
+            // 
+            this.IDbox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDbox.Location = new System.Drawing.Point(34, 423);
+            this.IDbox.Name = "IDbox";
+            this.IDbox.Size = new System.Drawing.Size(261, 26);
+            this.IDbox.TabIndex = 13;
+            this.IDbox.Text = "ID";
+            this.IDbox.TextChanged += new System.EventHandler(this.IDbox_TextChanged);
+            // 
+            // Clear
+            // 
+            this.Clear.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clear.FlatAppearance.BorderSize = 0;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Clear.Location = new System.Drawing.Point(32, 454);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(89, 28);
+            this.Clear.TabIndex = 11;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_11;
+            this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteButton.FlatAppearance.BorderSize = 0;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DeleteButton.Location = new System.Drawing.Point(210, 454);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(89, 28);
+            this.DeleteButton.TabIndex = 9;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // logbookdtTableAdapter1
+            // 
+            this.logbookdtTableAdapter1.ClearBeforeFill = true;
+            // 
+            // loginDataSet5
+            // 
+            this.loginDataSet5.DataSetName = "loginDataSet5";
+            this.loginDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // logbookdtBindingSource4
+            // 
+            this.logbookdtBindingSource4.DataMember = "logbookdt";
+            this.logbookdtBindingSource4.DataSource = this.loginDataSet5;
+            // 
+            // logbookdtTableAdapter2
+            // 
+            this.logbookdtTableAdapter2.ClearBeforeFill = true;
+            // 
             // Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,5 +481,8 @@
         private System.Windows.Forms.Button Changebutt;
         private System.Windows.Forms.Button Exportbutt;
         private System.Windows.Forms.Button Addbutt;
+        private loginDataSet5 loginDataSet5;
+        private System.Windows.Forms.BindingSource logbookdtBindingSource4;
+        private loginDataSet5TableAdapters.logbookdtTableAdapter logbookdtTableAdapter2;
     }
 }

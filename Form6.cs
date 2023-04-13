@@ -106,14 +106,16 @@ namespace ExperimentOnly
 
         private void Delete_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
-            this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
+            // TODO: This line of code loads data into the 'loginDataSet5.logbookdt' table. You can move, or remove it, as needed.
+            this.logbookdtTableAdapter2.Fill(this.loginDataSet5.logbookdt);
+           
+            
 
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
-
+            IDbox.Clear();
         }
 
         private void GroupLogDeets_Enter(object sender, EventArgs e)

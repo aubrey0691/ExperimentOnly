@@ -1,4 +1,5 @@
 ﻿using Devart.Data.PostgreSql;
+using Google.Protobuf;
 using Microsoft.Office.Interop.Excel;
 using Org.BouncyCastle.Utilities.Encoders;
 using System;
@@ -35,58 +36,59 @@ namespace ExperimentOnly
        
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Create SqlConnection
-                PgSqlConnection con = new PgSqlConnection(cs);
-                PgSqlCommand cmd = new PgSqlCommand("insert into logbookdt(date,time,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
-                DateTime aDate = DateTime.Now;
-                DateTime aTime = DateTime.Now;
-                aDate.ToString("MM/dd/yyyy");
-                aTime.ToString("HH:mm:ss");
-                string scolor = "";
-                if (TimeOut.Checked)
+                try
                 {
-                    scolor = TimeOut.Text;
-                }
+                    //Create SqlConnection
+                    PgSqlConnection con = new PgSqlConnection(cs);
+                    PgSqlCommand cmd = new PgSqlCommand("insert into logbookdt(date,time,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
+                    //DateTime aDate = dateTimePicker1.Value.ToString();
+                   // DateTime aTime = dateTimePicker2.Value.Text;
+                    //aDate.ToString("MM/dd/yyyy");
+                   // aTime.ToString("HH:mm:ss");
+                    string scolor = "";
+                    if (TimeOut.Checked)
+                    {
+                        scolor = TimeOut.Text;
+                    }
 
-                if (TimeIn.Checked)
-                {
-                    scolor = TimeIn.Text;
-                }
-                cmd.Parameters.AddWithValue("@date", aDate);
-                cmd.Parameters.AddWithValue("@time", aTime);
-                cmd.Parameters.AddWithValue("@time_state", scolor);
-                cmd.Parameters.AddWithValue("@time_state", n1);
-                cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
-                cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
-                cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
-                cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
-                cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
-                cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
-                cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
-                con.Open();
-                PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                adapt.Fill(ds);
-                con.Close();
-                int count = ds.Tables[0].Rows.Count;
-                //If count is equal to 1, than show frmMain form
-                if (count == 1)
-                {
-                    MessageBox.Show("Successful!");
+                    if (TimeIn.Checked)
+                    {
+                        scolor = TimeIn.Text;
+                    }
+                    cmd.Parameters.AddWithValue("@date", dateTimePicker1.Value.ToString("MM/dd/yyyy"));
+                    //cmd.Parameters.AddWithValue("@time", dateTimePicker2.Value.ToString("HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@time_state", scolor);
+                    cmd.Parameters.AddWithValue("@time_state", n1);
+                    cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
+                    cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
+                    cmd.Parameters.AddWithValue("@middle_initial", MiddleInitialbox.Text);
+                    cmd.Parameters.AddWithValue("@last_name", LastNamebox.Text);
+                    cmd.Parameters.AddWithValue("@purpose", Purposebox.Text);
+                    cmd.Parameters.AddWithValue("@email", EmailAddbox.Text);
+                    cmd.Parameters.AddWithValue("@affiliation", Affiliationbox.Text);
+                    con.Open();
+                    PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapt.Fill(ds);
+                    con.Close();
+                    int count = ds.Tables[0].Rows.Count;
+                    //If count is equal to 1, than show frmMain form
+                    if (count == 1)
+                    {
+                        MessageBox.Show("Successful!");
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed!");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed!");
+                    MessageBox.Show(ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
+        
 
         private void TimeIn_CheckedChanged(object sender, EventArgs e)
         {
@@ -114,6 +116,59 @@ namespace ExperimentOnly
             LogbookDataB fm = new LogbookDataB();
             fm.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+           
+                
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Honorificsbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstNamebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MiddleInitialbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LastNamebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Purposebox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailAddbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Affiliationbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

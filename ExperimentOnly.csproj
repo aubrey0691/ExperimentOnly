@@ -60,6 +60,9 @@
     <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="AdvancedDataGridView, Version=1.2.27706.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DG.AdvancedDataGridView.1.2.27706.9\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
@@ -400,6 +403,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -424,11 +428,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datalayer.cs" />
+    <Compile Include="DataSet12.cs">
+      <DependentUpon>DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2 - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2 - Copy.Designer.cs">
+      <DependentUpon>Form2 - Copy.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -441,6 +459,18 @@
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4 - Copy - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4 - Copy - Copy.Designer.cs">
+      <DependentUpon>Form4 - Copy - Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4 - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4 - Copy.Designer.cs">
+      <DependentUpon>Form4 - Copy.cs</DependentUpon>
     </Compile>
     <Compile Include="Form6.cs">
       <SubType>Form</SubType>
@@ -481,10 +511,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>loginDataSet21.xsd</DependentUpon>
     </Compile>
+    <Compile Include="loginDataSet3.cs">
+      <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="loginDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs" />
     <Compile Include="Program.cs" />
@@ -496,11 +539,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2 - Copy.resx">
+      <DependentUpon>Form2 - Copy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4 - Copy - Copy.resx">
+      <DependentUpon>Form4 - Copy - Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4 - Copy.resx">
+      <DependentUpon>Form4 - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
@@ -522,6 +574,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet12.xsc">
+      <DependentUpon>DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet12.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet12.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet12.xss">
+      <DependentUpon>DataSet12.xsd</DependentUpon>
+    </None>
     <None Include="loginDataSet11.xsc">
       <DependentUpon>loginDataSet11.xsd</DependentUpon>
     </None>
@@ -565,6 +628,28 @@
     </None>
     <None Include="loginDataSet3.xss">
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet4.xsc">
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet4.xss">
+      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet5.xsc">
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="loginDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>loginDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="loginDataSet5.xss">
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

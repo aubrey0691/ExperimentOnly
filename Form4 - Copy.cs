@@ -14,9 +14,9 @@ using Microsoft.Office.Interop.Excel;
 
 namespace ExperimentOnly
 {
-    public partial class LogbookDataB : Form
+    public partial class GuestLogbookDataB : Form
     {
-        public LogbookDataB()
+        public GuestLogbookDataB()
         {
             InitializeComponent();
         }
@@ -76,7 +76,11 @@ namespace ExperimentOnly
 
         private void LogbookDataB_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'loginDataSet51.logbookdt' table. You can move, or remove it, as needed.
+            this.logbookdtTableAdapter2.Fill(this.loginDataSet51.logbookdt);
+            // TODO: This line of code loads data into the 'loginDataSet5.guestlogdt' table. You can move, or remove it, as needed.
+            this.guestlogdtTableAdapter.Fill(this.loginDataSet5.guestlogdt);
+            
             string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;"; 
             PgSqlConnection connection = null;
             PgSqlDataReader reader = null;
@@ -99,9 +103,6 @@ namespace ExperimentOnly
                 if (connection != null)
                     connection.Close();
             }
-
-            this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -121,9 +122,7 @@ namespace ExperimentOnly
 
         private void Guestbutt_Click(object sender, EventArgs e)
         {
-            GuestLogbookDataB gdt = new GuestLogbookDataB();
-            gdt.Show();
-            this.Hide();
+
         }
         string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
         private void Clearbutt_Click(object sender, EventArgs e)
@@ -138,7 +137,7 @@ namespace ExperimentOnly
                 {
                     //Create SqlConnection
                     PgSqlConnection con = new PgSqlConnection(cs);
-                    PgSqlCommand cmd = new PgSqlCommand("Delete from logbookdt", con);
+                    PgSqlCommand cmd = new PgSqlCommand("Delete from guestlogbookdt", con);
 
                     con.Open();
                     PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
@@ -172,6 +171,11 @@ namespace ExperimentOnly
             }
 
             
+        }
+
+        private void guestlogdtDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

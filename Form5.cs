@@ -88,5 +88,12 @@ namespace ExperimentOnly
         {
             this.Close();
         }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            LogbookDataB fm = new LogbookDataB();
+            fm.Show();
+            this.Hide();
+        }
     }
 }

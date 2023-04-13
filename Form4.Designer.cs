@@ -39,18 +39,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.logbookdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timestateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.honorificsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleinitialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purposeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.affiliationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
             this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -60,8 +48,19 @@
             this.logbookdtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logbookdtTableAdapter = new ExperimentOnly.loginDataSetTableAdapters.logbookdtTableAdapter();
             this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
+            this.affiliationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purposeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleinitialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.honorificsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timestateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
@@ -69,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Addbutt
@@ -124,6 +124,7 @@
             this.Clearbutt.Size = new System.Drawing.Size(317, 58);
             this.Clearbutt.TabIndex = 3;
             this.Clearbutt.UseVisualStyleBackColor = false;
+            this.Clearbutt.Click += new System.EventHandler(this.Clearbutt_Click);
             // 
             // Guestbutt
             // 
@@ -137,6 +138,7 @@
             this.Guestbutt.Size = new System.Drawing.Size(155, 58);
             this.Guestbutt.TabIndex = 4;
             this.Guestbutt.UseVisualStyleBackColor = false;
+            this.Guestbutt.Click += new System.EventHandler(this.Guestbutt_Click);
             // 
             // Internbutt
             // 
@@ -150,6 +152,7 @@
             this.Internbutt.Size = new System.Drawing.Size(155, 58);
             this.Internbutt.TabIndex = 5;
             this.Internbutt.UseVisualStyleBackColor = false;
+            this.Internbutt.Click += new System.EventHandler(this.Internbutt_Click);
             // 
             // button1
             // 
@@ -192,97 +195,6 @@
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MintCream;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.timeDataGridViewTextBoxColumn,
-            this.timestateDataGridViewTextBoxColumn,
-            this.honorificsDataGridViewTextBoxColumn,
-            this.firstnameDataGridViewTextBoxColumn,
-            this.middleinitialDataGridViewTextBoxColumn,
-            this.lastnameDataGridViewTextBoxColumn,
-            this.purposeDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.affiliationDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.logbookdtBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(343, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(881, 585);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            // 
-            // timestateDataGridViewTextBoxColumn
-            // 
-            this.timestateDataGridViewTextBoxColumn.DataPropertyName = "time_state";
-            this.timestateDataGridViewTextBoxColumn.HeaderText = "time_state";
-            this.timestateDataGridViewTextBoxColumn.Name = "timestateDataGridViewTextBoxColumn";
-            // 
-            // honorificsDataGridViewTextBoxColumn
-            // 
-            this.honorificsDataGridViewTextBoxColumn.DataPropertyName = "honorifics";
-            this.honorificsDataGridViewTextBoxColumn.HeaderText = "honorifics";
-            this.honorificsDataGridViewTextBoxColumn.Name = "honorificsDataGridViewTextBoxColumn";
-            // 
-            // firstnameDataGridViewTextBoxColumn
-            // 
-            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
-            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
-            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
-            // 
-            // middleinitialDataGridViewTextBoxColumn
-            // 
-            this.middleinitialDataGridViewTextBoxColumn.DataPropertyName = "middle_initial";
-            this.middleinitialDataGridViewTextBoxColumn.HeaderText = "middle_initial";
-            this.middleinitialDataGridViewTextBoxColumn.Name = "middleinitialDataGridViewTextBoxColumn";
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            // 
-            // purposeDataGridViewTextBoxColumn
-            // 
-            this.purposeDataGridViewTextBoxColumn.DataPropertyName = "purpose";
-            this.purposeDataGridViewTextBoxColumn.HeaderText = "purpose";
-            this.purposeDataGridViewTextBoxColumn.Name = "purposeDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // affiliationDataGridViewTextBoxColumn
-            // 
-            this.affiliationDataGridViewTextBoxColumn.DataPropertyName = "affiliation";
-            this.affiliationDataGridViewTextBoxColumn.HeaderText = "affiliation";
-            this.affiliationDataGridViewTextBoxColumn.Name = "affiliationDataGridViewTextBoxColumn";
             // 
             // logbookdtBindingSource3
             // 
@@ -327,6 +239,97 @@
             // 
             this.logbookdtTableAdapter1.ClearBeforeFill = true;
             // 
+            // affiliationDataGridViewTextBoxColumn
+            // 
+            this.affiliationDataGridViewTextBoxColumn.DataPropertyName = "affiliation";
+            this.affiliationDataGridViewTextBoxColumn.HeaderText = "affiliation";
+            this.affiliationDataGridViewTextBoxColumn.Name = "affiliationDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // purposeDataGridViewTextBoxColumn
+            // 
+            this.purposeDataGridViewTextBoxColumn.DataPropertyName = "purpose";
+            this.purposeDataGridViewTextBoxColumn.HeaderText = "purpose";
+            this.purposeDataGridViewTextBoxColumn.Name = "purposeDataGridViewTextBoxColumn";
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            // 
+            // middleinitialDataGridViewTextBoxColumn
+            // 
+            this.middleinitialDataGridViewTextBoxColumn.DataPropertyName = "middle_initial";
+            this.middleinitialDataGridViewTextBoxColumn.HeaderText = "middle_initial";
+            this.middleinitialDataGridViewTextBoxColumn.Name = "middleinitialDataGridViewTextBoxColumn";
+            // 
+            // firstnameDataGridViewTextBoxColumn
+            // 
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            // 
+            // honorificsDataGridViewTextBoxColumn
+            // 
+            this.honorificsDataGridViewTextBoxColumn.DataPropertyName = "honorifics";
+            this.honorificsDataGridViewTextBoxColumn.HeaderText = "honorifics";
+            this.honorificsDataGridViewTextBoxColumn.Name = "honorificsDataGridViewTextBoxColumn";
+            // 
+            // timestateDataGridViewTextBoxColumn
+            // 
+            this.timestateDataGridViewTextBoxColumn.DataPropertyName = "time_state";
+            this.timestateDataGridViewTextBoxColumn.HeaderText = "time_state";
+            this.timestateDataGridViewTextBoxColumn.Name = "timestateDataGridViewTextBoxColumn";
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MintCream;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.timeDataGridViewTextBoxColumn,
+            this.timestateDataGridViewTextBoxColumn,
+            this.honorificsDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
+            this.middleinitialDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.purposeDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.affiliationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.logbookdtBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(343, 96);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(881, 585);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
             // LogbookDataB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,7 +355,6 @@
             this.Text = "LogBook";
             this.Load += new System.EventHandler(this.LogbookDataB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
@@ -360,6 +362,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -381,21 +384,21 @@
         private System.Windows.Forms.BindingSource logbookdtBindingSource;
         private loginDataSetTableAdapters.logbookdtTableAdapter logbookdtTableAdapter;
         private System.Windows.Forms.BindingSource logbookdtBindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timestateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn honorificsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn middleinitialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn affiliationDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource logbookdtBindingSource2;
         private loginDataSet3 loginDataSet3;
         private System.Windows.Forms.BindingSource logbookdtBindingSource3;
         private loginDataSet3TableAdapters.logbookdtTableAdapter logbookdtTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn affiliationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleinitialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn honorificsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timestateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

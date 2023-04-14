@@ -253,7 +253,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "MMMMdd, yyyy";
+            this.dateTimePicker1.CustomFormat = "yyyy, MMMMdd";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(201, 390);
@@ -265,16 +265,15 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateTimePicker2.CustomFormat = "HH:mm:ss";
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(383, 390);
+            this.dateTimePicker2.Location = new System.Drawing.Point(377, 390);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(81, 24);
+            this.dateTimePicker2.Size = new System.Drawing.Size(103, 24);
             this.dateTimePicker2.TabIndex = 15;
-            this.dateTimePicker2.Value = new System.DateTime(2023, 4, 13, 15, 50, 0, 0);
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.dateTimePicker2.Value = new System.DateTime(2023, 4, 13, 0, 0, 0, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged_1);
             // 
             // addlog
             // 
@@ -320,7 +319,7 @@
         private System.Windows.Forms.RadioButton TimeIn;
         private System.Windows.Forms.RadioButton TimeOut;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

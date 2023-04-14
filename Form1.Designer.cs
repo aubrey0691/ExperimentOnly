@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingPage));
             this.Intern = new System.Windows.Forms.Button();
-            this.Guest = new System.Windows.Forms.Button();
             this.Admin = new System.Windows.Forms.Button();
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,29 +44,12 @@
             this.Intern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Intern.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intern.ForeColor = System.Drawing.SystemColors.Window;
-            this.Intern.Location = new System.Drawing.Point(172, 354);
+            this.Intern.Location = new System.Drawing.Point(172, 405);
             this.Intern.Name = "Intern";
             this.Intern.Size = new System.Drawing.Size(320, 50);
             this.Intern.TabIndex = 0;
             this.Intern.UseVisualStyleBackColor = false;
             this.Intern.Click += new System.EventHandler(this.Intern_Click);
-            // 
-            // Guest
-            // 
-            this.Guest.BackColor = System.Drawing.Color.Transparent;
-            this.Guest.BackgroundImage = global::ExperimentOnly.Properties.Resources.Guest;
-            this.Guest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Guest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Guest.FlatAppearance.BorderSize = 0;
-            this.Guest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Guest.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guest.ForeColor = System.Drawing.SystemColors.Window;
-            this.Guest.Location = new System.Drawing.Point(172, 444);
-            this.Guest.Name = "Guest";
-            this.Guest.Size = new System.Drawing.Size(320, 50);
-            this.Guest.TabIndex = 1;
-            this.Guest.UseVisualStyleBackColor = false;
-            this.Guest.Click += new System.EventHandler(this.Guest_Click_3);
             // 
             // Admin
             // 
@@ -79,7 +61,7 @@
             this.Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.SystemColors.Window;
-            this.Admin.Location = new System.Drawing.Point(172, 535);
+            this.Admin.Location = new System.Drawing.Point(172, 491);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(320, 50);
             this.Admin.TabIndex = 2;
@@ -109,7 +91,6 @@
             this.ClientSize = new System.Drawing.Size(1224, 681);
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.Admin);
-            this.Controls.Add(this.Guest);
             this.Controls.Add(this.Intern);
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1240, 720);
@@ -126,7 +107,6 @@
         #endregion
 
         private System.Windows.Forms.Button Intern;
-        private System.Windows.Forms.Button Guest;
         private System.Windows.Forms.Button Admin;
         private System.Windows.Forms.Label WelcomeLabel;
     }

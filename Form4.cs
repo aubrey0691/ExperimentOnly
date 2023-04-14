@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using Microsoft.Office.Interop.Excel;
+using Devart.Data.Linq.Mapping.Fluent;
+using System.IO;
 
 
 namespace ExperimentOnly
@@ -37,7 +39,7 @@ namespace ExperimentOnly
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OverallLogbookDataB fm = new OverallLogbookDataB();
+            LogbookDataB fm = new LogbookDataB();
             fm.Show();
             this.Hide();
         }
@@ -76,6 +78,8 @@ namespace ExperimentOnly
 
         private void LogbookDataB_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'loginDataSet51.alldt' table. You can move, or remove it, as needed.
+            this.alldtTableAdapter.Fill(this.loginDataSet51.alldt);
             // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
             string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;"; 
             PgSqlConnection connection = null;
@@ -138,7 +142,7 @@ namespace ExperimentOnly
                 {
                     //Create SqlConnection
                     PgSqlConnection con = new PgSqlConnection(cs);
-                    PgSqlCommand cmd = new PgSqlCommand("Delete from logbookdt", con);
+                    PgSqlCommand cmd = new PgSqlCommand("Delete from alldt", con);
 
                     con.Open();
                     PgSqlDataAdapter adapt = new PgSqlDataAdapter(cmd);
@@ -172,6 +176,99 @@ namespace ExperimentOnly
             }
 
             
+        }
+
+        private void Exportbutt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExportFileFromLocalDb1()
+        {
+            // Export path and file.  
+            string exportPath = "D:\\JESAP files\\LTS Project\\Test\\"; //D:\JESAP files\LTS Project\Test  
+            string exportCsv = "transaction.csv";
+
+            // Stream writer for CSV file.  
+            StreamWriter csvFile = null;
+
+            // Check to see if the file path exists.  
+            if (Directory.Exists(exportPath))
+            {
+                PgSqlConnection con = new PgSqlConnection(cs);
+                PgSqlCommand cmd = new PgSqlCommand("Delete from alldt", con);
+
+                try
+                {
+                    using (PgSqlConnection con = ClassConnection.GetDbCon())
+                    {
+                        PgSqlCommand cmd = new PgSqlCommand("SELECT id, date, time, user_type, time_state, honorifics, first_name, middle_initial, last_name, purpose, email, affiliation FROM alldt;", con);
+                        cmd.CommandType = CommandType.Text;
+                        con.Open();
+                        PgSqlDataReader rdr = cmd.ExecuteReader();
+
+                        // Stream writer for CSV file.  
+                        csvFile = new StreamWriter(@exportPath + exportCsv);
+
+                        // Add the headers to the CSV file.  
+                        csvFile.WriteLine(string.Format("\"{0}\",\"{1}\",\"{2}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"",
+                            rdr.GetName(0),
+                            rdr.GetName(1),
+                            rdr.GetName(2),
+                            rdr.GetName(3),
+                            rdr.GetName(4),
+                            rdr.GetName(5),
+                            rdr.GetName(6),
+                            rdr.GetName(7),
+                            rdr.GetName(8),
+                            rdr.GetName(9),
+                            rdr.GetName(10)
+                            ));
+
+                        // Construct CSV file data rows.  
+                        while (rdr.Read())
+                        {
+
+                            // Add line from reader object to new CSV file.  
+                            csvFile.WriteLine(string.Format("\"{0}\",\"{1}\",\"{2}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"",
+                            rdr.GetName(0),
+                            rdr.GetName(1),
+                            rdr.GetName(2),
+                            rdr.GetName(3),
+                            rdr.GetName(4),
+                            rdr.GetName(5),
+                            rdr.GetName(6),
+                            rdr.GetName(7),
+                            rdr.GetName(8),
+                            rdr.GetName(9),
+                            rdr.GetName(10)
+                            ));
+
+                        }
+
+                        // Message stating export successful.  
+                        MessageBox.Show("Data export successful.");
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+
+                }
+                finally
+                {
+                    csvFile.Close();
+                }
+
+            }
+            else
+            {
+
+                // Display a message stating file path does not exist.  
+                MessageBox.Show("File path does not exist.");
+
+            }
         }
     }
 }

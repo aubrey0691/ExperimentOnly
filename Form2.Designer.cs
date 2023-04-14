@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.FirstNamebox = new System.Windows.Forms.TextBox();
             this.Honorificsbox = new System.Windows.Forms.TextBox();
             this.LastNamebox = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.TimeOut = new System.Windows.Forms.RadioButton();
             this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.GroupLogDeets.SuspendLayout();
             this.radioboxgroup.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,23 @@
             this.GroupLogDeets.TabIndex = 0;
             this.GroupLogDeets.TabStop = false;
             this.GroupLogDeets.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Intern",
+            "Guest"});
+            this.comboBox1.Location = new System.Drawing.Point(173, 16);
+            this.comboBox1.MaximumSize = new System.Drawing.Size(121, 0);
+            this.comboBox1.MinimumSize = new System.Drawing.Size(121, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.Text = "User Type";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FirstNamebox
             // 
@@ -261,22 +278,6 @@
             this.label1.Size = new System.Drawing.Size(207, 77);
             this.label1.TabIndex = 16;
             this.label1.Text = "Intern";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Intern",
-            "Guest"});
-            this.comboBox1.Location = new System.Drawing.Point(173, 16);
-            this.comboBox1.MaximumSize = new System.Drawing.Size(121, 0);
-            this.comboBox1.MinimumSize = new System.Drawing.Size(121, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.Text = "User Type";
             // 
             // LogDetails
             // 

@@ -24,6 +24,7 @@ using Mysqlx.Datatypes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
+
 namespace ExperimentOnly
 {
     public partial class LogDetails : Form
@@ -50,7 +51,7 @@ namespace ExperimentOnly
             {
                 //Create SqlConnection
                 PgSqlConnection con = new PgSqlConnection(cs);
-                PgSqlCommand cmd = new PgSqlCommand("insert into logbookdt(date,time,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
+                PgSqlCommand cmd = new PgSqlCommand("insert into alldt(date,time,user_type,time_state,honorifics,first_name,middle_initial,last_name,purpose,email,affiliation) values (@date, @time, @user_type,  @time_state, @honorifics, @first_name, @middle_initial, @last_name, @purpose, @email, @affiliation)", con);
                 DateTime aDate = DateTime.Now;
                 DateTime aTime = DateTime.Now;
                 aDate.ToString("MM/dd/yyyy");
@@ -68,6 +69,7 @@ namespace ExperimentOnly
 
                 cmd.Parameters.AddWithValue("@date", aDate);
                 cmd.Parameters.AddWithValue("@time", aTime);
+                cmd.Parameters.AddWithValue("@user_type", comboBox1.SelectedItem);
                 cmd.Parameters.AddWithValue("@time_state", scolor);
                 cmd.Parameters.AddWithValue("@honorifics", Honorificsbox.Text);
                 cmd.Parameters.AddWithValue("@first_name", FirstNamebox.Text);
@@ -90,7 +92,7 @@ namespace ExperimentOnly
                 }
                 else
                 {
-                    MessageBox.Show("Failed!");
+                    MessageBox.Show("Submitted!");
                 }
             }
             catch (Exception ex)
@@ -251,8 +253,9 @@ namespace ExperimentOnly
 
         }
 
-     
-
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

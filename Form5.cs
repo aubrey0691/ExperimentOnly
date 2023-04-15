@@ -8,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XAct.Library.Settings;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MySqlX.XDevAPI;
 using System.Xml.Linq;
 using Npgsql;
 using Devart.Data.PostgreSql;
-using System.Data.OleDb;
 
 namespace ExperimentOnly
 {

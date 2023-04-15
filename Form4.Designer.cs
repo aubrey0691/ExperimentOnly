@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogbookDataB));
             this.Addbutt = new System.Windows.Forms.Button();
             this.Exportbutt = new System.Windows.Forms.Button();
             this.Changebutt = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advancedDataGridViewSearchToolBar1 = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
+            this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,10 +54,6 @@
             this.affiliationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alldtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginDataSet51 = new ExperimentOnly.loginDataSet5();
-            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
-            this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
             this.loginDataSet5 = new ExperimentOnly.loginDataSet5();
             this.loginDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alldtTableAdapter = new ExperimentOnly.loginDataSet5TableAdapters.alldtTableAdapter();
@@ -63,10 +61,9 @@
             this.alldtBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet52)).BeginInit();
@@ -341,22 +338,6 @@
             this.loginDataSet51.DataSetName = "loginDataSet5";
             this.loginDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // logbookdtBindingSource3
-            // 
-            this.logbookdtBindingSource3.DataMember = "logbookdt";
-            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
-            // 
-            // loginDataSet3
-            // 
-            this.loginDataSet3.DataSetName = "loginDataSet3";
-            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-           
-            // 
-            // logbookdtTableAdapter1
-            // 
-            this.logbookdtTableAdapter1.ClearBeforeFill = true;
-            // 
             // loginDataSet5
             // 
             this.loginDataSet5.DataSetName = "loginDataSet5";
@@ -397,6 +378,7 @@
             this.Controls.Add(this.Exportbutt);
             this.Controls.Add(this.Addbutt);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1240, 720);
             this.MinimumSize = new System.Drawing.Size(1240, 720);
             this.Name = "LogbookDataB";
@@ -405,11 +387,9 @@
             this.Load += new System.EventHandler(this.LogbookDataB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet52)).EndInit();
@@ -427,12 +407,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.BindingSource logbookdataBindingSource;
-        private System.Windows.Forms.BindingSource logbookdtBindingSource;
-        private System.Windows.Forms.BindingSource logbookdtBindingSource1;
         private System.Windows.Forms.BindingSource logbookdtBindingSource2;
-        private loginDataSet3 loginDataSet3;
-        private System.Windows.Forms.BindingSource logbookdtBindingSource3;
-        private loginDataSet3TableAdapters.logbookdtTableAdapter logbookdtTableAdapter1;
         private Zuby.ADGV.AdvancedDataGridView advancedDataGridView1;
         private loginDataSet5 loginDataSet5;
         private System.Windows.Forms.BindingSource loginDataSet5BindingSource;

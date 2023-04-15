@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,14 +17,10 @@ namespace ExperimentOnly
 {
     public partial class addlog : Form
     {
-        PgSqlConnection con = new PgSqlConnection();
-        PgSqlCommand command = new PgSqlCommand();
-        string n1;
-        int rm;
-        Datalayer dl;
+        
         public addlog()
         {
-            dl = new Datalayer();
+            
             InitializeComponent();
         }
         string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
@@ -169,10 +164,7 @@ namespace ExperimentOnly
 
         private void dateTimePicker2_ValueChanged_1(object sender, EventArgs e)
         {
-            DateTime dt = new DateTime();
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.CustomFormat = "HH:mm:ss";
-            dateTimePicker2.ShowUpDown = true;
+            
         }
     }
 }

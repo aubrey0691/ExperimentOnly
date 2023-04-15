@@ -56,6 +56,9 @@
   <PropertyGroup>
     <StartupObject>ExperimentOnly.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -75,8 +78,6 @@
     <Reference Include="Devart.Data.Design, Version=5.0.3075.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.Linq, Version=5.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.Linq.Web.DynamicData, Version=5.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Oracle.Entity.EFCore.NetTopologySuite, Version=10.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Oracle.Entity.Migrations.EF5, Version=10.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.Oracle.Linq, Version=5.0.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.PostgreSql, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <HintPath>packages\dotConnect.Express.for.PostgreSQL.8.1.134\lib\Devart.Data.PostgreSql.dll</HintPath>
@@ -87,8 +88,6 @@
     <Reference Include="Devart.Data.PostgreSql.Entity.EFCore.Design, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
       <HintPath>packages\Devart.Data.PostgreSql.EFCore.Design.8.1.134\lib\netstandard1.3\Devart.Data.PostgreSql.Entity.EFCore.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Devart.Data.PostgreSql.Entity.EFCore.NetTopologySuite, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.PostgreSql.Entity.Migrations.EF5, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.PostgreSql.Entity.Spatials.EF6, Version=8.1.134.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.PostgreSql.Synchronization, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Devart.Data.PostgreSql.Vs.14, Version=8.1.134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
@@ -428,15 +427,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datalayer.cs" />
-    <Compile Include="DataSet12.cs">
-      <DependentUpon>DataSet12.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet12.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet12.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Export.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,14 +462,6 @@
     </Compile>
     <Compile Include="addlog.Designer.cs">
       <DependentUpon>addlog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="loginDataSet3.cs">
-      <DependentUpon>loginDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="loginDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="loginDataSet5.cs">
       <DependentUpon>loginDataSet5.xsd</DependentUpon>
@@ -522,28 +504,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DataSet12.xsc">
-      <DependentUpon>DataSet12.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet12.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet12.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet12.xss">
-      <DependentUpon>DataSet12.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet3.xsc">
-      <DependentUpon>loginDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet3.xss">
-      <DependentUpon>loginDataSet3.xsd</DependentUpon>
-    </None>
     <None Include="loginDataSet5.xsc">
       <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </None>
@@ -718,6 +678,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dabc5de3-906b-4214-8025-069b7f2ea856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

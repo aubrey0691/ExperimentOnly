@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addlog));
             this.LogbookFormLabel = new System.Windows.Forms.Label();
             this.GroupLogDeets = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -287,11 +288,12 @@
             this.Controls.Add(this.LogbookFormLabel);
             this.Controls.Add(this.GroupLogDeets);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(700, 800);
             this.MinimumSize = new System.Drawing.Size(700, 800);
             this.Name = "addlog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form6";
+            this.Text = "Add Logs";
             this.GroupLogDeets.ResumeLayout(false);
             this.GroupLogDeets.PerformLayout();
             this.radioboxgroup.ResumeLayout(false);

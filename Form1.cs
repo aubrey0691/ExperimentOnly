@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 namespace ExperimentOnly
 {
     public partial class LandingPage : Form
@@ -45,7 +45,7 @@ namespace ExperimentOnly
 
         private void Intern_Click(object sender, EventArgs e)
         {
-            //Landing page(form1) Intern button opens the Intern Log Book Page(form2) upon clicking
+            //Landing page(form1) button opens the Log Book Page(form2) upon clicking
             
             LogDetails f2 = new LogDetails();
             f2.Show();
@@ -54,6 +54,7 @@ namespace ExperimentOnly
 
         private void Admin_Click(object sender, EventArgs e)
         {
+            //Landing page(form1) button opens the Admin Login Page(form 3) upon clicking
             AdminLogin f3 = new AdminLogin();
             f3.Show();
             this.Hide();

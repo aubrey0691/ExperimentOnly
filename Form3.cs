@@ -8,14 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XAct.Library.Settings;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using MySqlX.XDevAPI;
 using System.Xml.Linq;
-using Npgsql;
 using Devart.Data.PostgreSql;
-using System.Data.OleDb;
+
 
 
 
@@ -48,6 +44,7 @@ namespace ExperimentOnly
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            //input admin password which was saved in the database table users and checks if passwords match before logging in successfully
             if (Passwordbox.Text == "")
             {
                 MessageBox.Show("Please provide UserName and Password");
@@ -98,6 +95,7 @@ namespace ExperimentOnly
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //clear input value
             Passwordbox.Clear();
         }
 
@@ -113,6 +111,7 @@ namespace ExperimentOnly
 
         private void HomeButton_Click_1(object sender, EventArgs e)
         {
+            //button redirects back to the landing page (form 1)
             LandingPage f1 = new LandingPage();
             f1.Show();
             this.Hide();

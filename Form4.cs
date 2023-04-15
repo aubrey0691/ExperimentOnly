@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -161,7 +160,7 @@ namespace ExperimentOnly
                     }
                     else
                     {
-                        MessageBox.Show("Delete Failed!");
+                        MessageBox.Show("Delete Successful!");
                     }
                 }
                 catch (Exception ex)

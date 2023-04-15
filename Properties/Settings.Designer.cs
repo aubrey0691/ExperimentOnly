@@ -27,19 +27,10 @@ namespace ExperimentOnly.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Host=localhost;Database=login;Username=postgres;Password=root;Persist Security In" +
-            "fo=True;Port=5432")]
+            "fo=True;port=5432")]
         public string loginConnectionString {
             get {
                 return ((string)(this["loginConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
             }
         }
     }

@@ -42,12 +42,6 @@ namespace ExperimentOnly
 
         }
 
-        private void Guest_Click_3(object sender, EventArgs e)
-        {
-            GuestLogDetails f222 = new GuestLogDetails();
-            f222.Show();
-            this.Hide();
-        }
 
         private void Intern_Click(object sender, EventArgs e)
         {

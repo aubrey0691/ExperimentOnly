@@ -37,7 +37,7 @@
             // Intern
             // 
             this.Intern.BackColor = System.Drawing.Color.Transparent;
-            this.Intern.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_10;
+            this.Intern.BackgroundImage = global::ExperimentOnly.Properties.Resources._1f8e126c_a923_4a1a_b4d8_f54fd5ea4a2c;
             this.Intern.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Intern.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Intern.FlatAppearance.BorderSize = 0;
@@ -54,7 +54,7 @@
             // Admin
             // 
             this.Admin.BackColor = System.Drawing.Color.Transparent;
-            this.Admin.BackgroundImage = global::ExperimentOnly.Properties.Resources.Asset_9;
+            this.Admin.BackgroundImage = global::ExperimentOnly.Properties.Resources.dabc5de3_906b_4214_8025_069b7f2ea856;
             this.Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Admin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Admin.FlatAppearance.BorderSize = 0;

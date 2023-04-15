@@ -443,12 +443,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2 - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2 - Copy.Designer.cs">
-      <DependentUpon>Form2 - Copy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,24 +454,6 @@
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4 - Copy - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4 - Copy - Copy.Designer.cs">
-      <DependentUpon>Form4 - Copy - Copy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4 - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4 - Copy.Designer.cs">
-      <DependentUpon>Form4 - Copy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
@@ -497,21 +473,6 @@
     <Compile Include="addlog.Designer.cs">
       <DependentUpon>addlog.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet11.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="loginDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="loginDataSet21.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet21.xsd</DependentUpon>
-    </Compile>
     <Compile Include="loginDataSet3.cs">
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </Compile>
@@ -520,10 +481,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="loginDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
+    <Compile Include="loginDataSet5.cs">
+      <DependentUpon>loginDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="loginDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -540,23 +499,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2 - Copy.resx">
-      <DependentUpon>Form2 - Copy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4 - Copy - Copy.resx">
-      <DependentUpon>Form4 - Copy - Copy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4 - Copy.resx">
-      <DependentUpon>Form4 - Copy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
@@ -586,39 +533,6 @@
     <None Include="DataSet12.xss">
       <DependentUpon>DataSet12.xsd</DependentUpon>
     </None>
-    <None Include="loginDataSet11.xsc">
-      <DependentUpon>loginDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet11.xss">
-      <DependentUpon>loginDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet2.xsc">
-      <DependentUpon>loginDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet2.xss">
-      <DependentUpon>loginDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet21.xsc">
-      <DependentUpon>loginDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet21.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet21.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet21.xss">
-      <DependentUpon>loginDataSet21.xsd</DependentUpon>
-    </None>
     <None Include="loginDataSet3.xsc">
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
     </None>
@@ -629,17 +543,6 @@
     </None>
     <None Include="loginDataSet3.xss">
       <DependentUpon>loginDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet4.xsc">
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="loginDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>loginDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="loginDataSet4.xss">
-      <DependentUpon>loginDataSet4.xsd</DependentUpon>
     </None>
     <None Include="loginDataSet5.xsc">
       <DependentUpon>loginDataSet5.xsd</DependentUpon>
@@ -809,6 +712,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\23b37693-a35c-4e9a-90fc-c07ffe8176843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1f8e126c-a923-4a1a-b4d8-f54fd5ea4a2c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dabc5de3-906b-4214-8025-069b7f2ea856.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

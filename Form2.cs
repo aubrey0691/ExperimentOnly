@@ -55,7 +55,7 @@ namespace ExperimentOnly
                 DateTime aDate = DateTime.Now;
                 DateTime aTime = DateTime.Now;
                 aDate.ToString("MM/dd/yyyy");
-                aTime.ToString("HH:mm:ss");
+                aTime.ToString("hh:mm:ss.f");
                 string scolor = "";
                 if (TimeOut.Checked)
                 {

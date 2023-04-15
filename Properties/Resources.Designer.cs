@@ -73,6 +73,16 @@ namespace ExperimentOnly.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1f8e126c_a923_4a1a_b4d8_f54fd5ea4a2c {
+            get {
+                object obj = ResourceManager.GetObject("1f8e126c-a923-4a1a-b4d8-f54fd5ea4a2c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2057fcaa_04ef_4599_86c4_021ae3fc073c {
             get {
                 object obj = ResourceManager.GetObject("2057fcaa-04ef-4599-86c4-021ae3fc073c", resourceCulture);
@@ -416,6 +426,16 @@ namespace ExperimentOnly.Properties {
         internal static System.Drawing.Bitmap d834f0a7_fb6d_48c2_aae6_b3f4dd1a6be6 {
             get {
                 object obj = ResourceManager.GetObject("d834f0a7-fb6d-48c2-aae6-b3f4dd1a6be6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dabc5de3_906b_4214_8025_069b7f2ea856 {
+            get {
+                object obj = ResourceManager.GetObject("dabc5de3-906b-4214-8025-069b7f2ea856", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -69,13 +69,13 @@
             // 
             this.HomeButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeButton.BackgroundImage = global::ExperimentOnly.Properties.Resources._23b37693_a35c_4e9a_90fc_c07ffe8176841;
-            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.HomeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomeButton.FlatAppearance.BorderSize = 0;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Location = new System.Drawing.Point(174, 194);
+            this.HomeButton.Location = new System.Drawing.Point(185, 133);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(105, 51);
+            this.HomeButton.Size = new System.Drawing.Size(97, 32);
             this.HomeButton.TabIndex = 12;
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
@@ -89,9 +89,9 @@
             this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Clear.Location = new System.Drawing.Point(91, 133);
+            this.Clear.Location = new System.Drawing.Point(47, 133);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(118, 42);
+            this.Clear.Size = new System.Drawing.Size(97, 32);
             this.Clear.TabIndex = 11;
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.button1_Click);
@@ -102,7 +102,7 @@
             this.AdminLabel.BackColor = System.Drawing.Color.Transparent;
             this.AdminLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLabel.ForeColor = System.Drawing.Color.Black;
-            this.AdminLabel.Location = new System.Drawing.Point(167, 30);
+            this.AdminLabel.Location = new System.Drawing.Point(176, 33);
             this.AdminLabel.Name = "AdminLabel";
             this.AdminLabel.Size = new System.Drawing.Size(128, 38);
             this.AdminLabel.TabIndex = 2;
@@ -118,9 +118,9 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubmitButton.Location = new System.Drawing.Point(249, 133);
+            this.SubmitButton.Location = new System.Drawing.Point(319, 133);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(118, 42);
+            this.SubmitButton.Size = new System.Drawing.Size(97, 32);
             this.SubmitButton.TabIndex = 9;
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);

@@ -130,9 +130,9 @@
             this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Clear.Location = new System.Drawing.Point(121, 235);
+            this.Clear.Location = new System.Drawing.Point(81, 235);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(89, 28);
+            this.Clear.Size = new System.Drawing.Size(95, 28);
             this.Clear.TabIndex = 11;
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
@@ -145,9 +145,9 @@
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomeButton.FlatAppearance.BorderSize = 0;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Location = new System.Drawing.Point(196, 283);
+            this.HomeButton.Location = new System.Drawing.Point(187, 272);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(62, 21);
+            this.HomeButton.Size = new System.Drawing.Size(78, 30);
             this.HomeButton.TabIndex = 10;
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
@@ -161,9 +161,9 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubmitButton.Location = new System.Drawing.Point(242, 235);
+            this.SubmitButton.Location = new System.Drawing.Point(278, 235);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(89, 28);
+            this.SubmitButton.Size = new System.Drawing.Size(95, 28);
             this.SubmitButton.TabIndex = 9;
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);

@@ -58,7 +58,7 @@ namespace ExperimentOnly
             }
             else
             {
-                OverallLogbookDataB fm = new OverallLogbookDataB();
+                LogbookDataB fm = new LogbookDataB();
                 fm.Show();
                 this.Hide();
             }
@@ -78,9 +78,10 @@ namespace ExperimentOnly
 
         private void LogbookDataB_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'loginDataSet51.alldt' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'loginDataSet52.alldt' table. You can move, or remove it, as needed.
+            this.alldtTableAdapter.Fill(this.loginDataSet52.alldt);
             this.alldtTableAdapter.Fill(this.loginDataSet51.alldt);
-            // TODO: This line of code loads data into the 'loginDataSet3.logbookdt' table. You can move, or remove it, as needed.
+           
             string connectionString = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;"; 
             PgSqlConnection connection = null;
             PgSqlDataReader reader = null;
@@ -104,17 +105,23 @@ namespace ExperimentOnly
                     connection.Close();
             }
 
-            this.logbookdtTableAdapter1.Fill(this.loginDataSet3.logbookdt);
+            advancedDataGridView1.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            advancedDataGridView1.Columns[2].DefaultCellStyle.Format = (@"hh\:mm\:ss");
+            advancedDataGridView1.RowsDefaultCellStyle.BackColor = Color.MintCream;
+            advancedDataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            advancedDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+            advancedDataGridView1.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            advancedDataGridView1.DefaultCellStyle.SelectionForeColor = Color.MintCream;
+
+            advancedDataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            advancedDataGridView1.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            advancedDataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            advancedDataGridView1.AllowUserToResizeColumns = false;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Delete f1 = new Delete();
-            f1.Show();
-            this.Hide();
-
-        }
 
         private void Internbutt_Click(object sender, EventArgs e)
         {
@@ -123,12 +130,6 @@ namespace ExperimentOnly
             this.Hide();
         }
 
-        private void Guestbutt_Click(object sender, EventArgs e)
-        {
-            GuestLogbookDataB gdt = new GuestLogbookDataB();
-            gdt.Show();
-            this.Hide();
-        }
         string cs = @"Data Source=127.0.0.1; Database = login; Uid = postgres; Password = root; Persist Security Info = True;";
         private void Clearbutt_Click(object sender, EventArgs e)
         {
@@ -180,95 +181,66 @@ namespace ExperimentOnly
 
         private void Exportbutt_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ExportFileFromLocalDb1()
-        {
-            // Export path and file.  
-            string exportPath = "D:\\JESAP files\\LTS Project\\Test\\"; //D:\JESAP files\LTS Project\Test  
-            string exportCsv = "transaction.csv";
-
-            // Stream writer for CSV file.  
-            StreamWriter csvFile = null;
-
-            // Check to see if the file path exists.  
-            if (Directory.Exists(exportPath))
+            if (advancedDataGridView1.Rows.Count > 0)
             {
-                PgSqlConnection con = new PgSqlConnection(cs);
-                PgSqlCommand cmd = new PgSqlCommand("Delete from alldt", con);
-
-                try
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "CSV (*.csv)|*.csv";
+                sfd.FileName = "Output.csv";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    using (PgSqlConnection con = ClassConnection.GetDbCon())
+                    if (File.Exists(sfd.FileName))
                     {
-                        PgSqlCommand cmd = new PgSqlCommand("SELECT id, date, time, user_type, time_state, honorifics, first_name, middle_initial, last_name, purpose, email, affiliation FROM alldt;", con);
-                        cmd.CommandType = CommandType.Text;
-                        con.Open();
-                        PgSqlDataReader rdr = cmd.ExecuteReader();
-
-                        // Stream writer for CSV file.  
-                        csvFile = new StreamWriter(@exportPath + exportCsv);
-
-                        // Add the headers to the CSV file.  
-                        csvFile.WriteLine(string.Format("\"{0}\",\"{1}\",\"{2}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"",
-                            rdr.GetName(0),
-                            rdr.GetName(1),
-                            rdr.GetName(2),
-                            rdr.GetName(3),
-                            rdr.GetName(4),
-                            rdr.GetName(5),
-                            rdr.GetName(6),
-                            rdr.GetName(7),
-                            rdr.GetName(8),
-                            rdr.GetName(9),
-                            rdr.GetName(10)
-                            ));
-
-                        // Construct CSV file data rows.  
-                        while (rdr.Read())
+                        try
                         {
-
-                            // Add line from reader object to new CSV file.  
-                            csvFile.WriteLine(string.Format("\"{0}\",\"{1}\",\"{2}\",\"{4}\",\"{5}\",\"{6}\",\"{7}\",\"{8}\",\"{9}\",\"{10}\"",
-                            rdr.GetName(0),
-                            rdr.GetName(1),
-                            rdr.GetName(2),
-                            rdr.GetName(3),
-                            rdr.GetName(4),
-                            rdr.GetName(5),
-                            rdr.GetName(6),
-                            rdr.GetName(7),
-                            rdr.GetName(8),
-                            rdr.GetName(9),
-                            rdr.GetName(10)
-                            ));
-
+                            File.Delete(sfd.FileName);
                         }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            int columnCount = advancedDataGridView1.Columns.Count;
+                            string columnNames = "";
+                            string[] outputCsv = new string[advancedDataGridView1.Rows.Count + 1];
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                columnNames += advancedDataGridView1.Columns[i].HeaderText.ToString() + ",";
+                            }
+                            outputCsv[0] += columnNames;
 
-                        // Message stating export successful.  
-                        MessageBox.Show("Data export successful.");
+                            for (int i = 1; (i - 1) < advancedDataGridView1.Rows.Count; i++)
+                            {
+                                for (int j = 0; j < columnCount; j++)
+                                {
+                                    outputCsv[i] += advancedDataGridView1.Rows[i - 1].Cells[j].Value + ",";
+                                }
+                            }
+
+                            File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
+                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
                     }
                 }
-                catch (Exception e)
-                {
-
-                    throw e;
-
-                }
-                finally
-                {
-                    csvFile.Close();
-                }
-
             }
             else
             {
-
-                // Display a message stating file path does not exist.  
-                MessageBox.Show("File path does not exist.");
-
+                MessageBox.Show("No Record To Export !!!", "Info");
             }
         }
-    }
+
+        private void advancedDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }  
 }

@@ -34,25 +34,11 @@
             this.Changebutt = new System.Windows.Forms.Button();
             this.Clearbutt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.logbookdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
-            this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet1 = new ExperimentOnly.loginDataSet();
-            this.logbookdtBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet = new ExperimentOnly.loginDataSet();
-            this.logbookdtBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logbookdtTableAdapter = new ExperimentOnly.loginDataSetTableAdapters.logbookdtTableAdapter();
-            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
             this.advancedDataGridView1 = new Zuby.ADGV.AdvancedDataGridView();
-            this.loginDataSet5 = new ExperimentOnly.loginDataSet5();
-            this.loginDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginDataSet51 = new ExperimentOnly.loginDataSet5();
-            this.alldtBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alldtTableAdapter = new ExperimentOnly.loginDataSet5TableAdapters.alldtTableAdapter();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.advancedDataGridViewSearchToolBar1 = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,20 +50,27 @@
             this.purposeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.affiliationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.advancedDataGridViewSearchToolBar1 = new Zuby.ADGV.AdvancedDataGridViewSearchToolBar();
+            this.alldtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataSet51 = new ExperimentOnly.loginDataSet5();
+            this.logbookdtBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.loginDataSet3 = new ExperimentOnly.loginDataSet3();
+            this.logbookdtBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.logbookdtTableAdapter1 = new ExperimentOnly.loginDataSet3TableAdapters.logbookdtTableAdapter();
+            this.loginDataSet5 = new ExperimentOnly.loginDataSet5();
+            this.loginDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alldtTableAdapter = new ExperimentOnly.loginDataSet5TableAdapters.alldtTableAdapter();
+            this.loginDataSet52 = new ExperimentOnly.loginDataSet5();
+            this.alldtBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Addbutt
@@ -143,26 +136,12 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(30, 510);
+            this.button1.Location = new System.Drawing.Point(58, 510);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 37);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ExperimentOnly.Properties.Resources._60acf174_6dfd_4dde_b990_61bfe8edc378;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(216, 510);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 37);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -171,63 +150,23 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(123, 510);
+            this.button3.Location = new System.Drawing.Point(197, 510);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 36);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // logbookdtBindingSource3
-            // 
-            this.logbookdtBindingSource3.DataMember = "logbookdt";
-            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
-            // 
-            // loginDataSet3
-            // 
-            this.loginDataSet3.DataSetName = "loginDataSet3";
-            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // logbookdtBindingSource2
-            // 
-            this.logbookdtBindingSource2.DataMember = "logbookdt";
-            this.logbookdtBindingSource2.DataSource = this.loginDataSet1;
-            // 
-            // loginDataSet1
-            // 
-            this.loginDataSet1.DataSetName = "loginDataSet";
-            this.loginDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // logbookdtBindingSource1
-            // 
-            this.logbookdtBindingSource1.DataMember = "logbookdt";
-            this.logbookdtBindingSource1.DataSource = this.loginDataSet1;
-            // 
-            // loginDataSet
-            // 
-            this.loginDataSet.DataSetName = "loginDataSet";
-            this.loginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // logbookdtBindingSource
-            // 
-            this.logbookdtBindingSource.DataMember = "logbookdt";
-            this.logbookdtBindingSource.DataSource = this.loginDataSet1;
-            // 
-            // logbookdtTableAdapter
-            // 
-            this.logbookdtTableAdapter.ClearBeforeFill = true;
-            // 
-            // logbookdtTableAdapter1
-            // 
-            this.logbookdtTableAdapter1.ClearBeforeFill = true;
-            // 
             // advancedDataGridView1
             // 
+            this.advancedDataGridView1.AllowUserToAddRows = false;
+            this.advancedDataGridView1.AllowUserToResizeColumns = false;
+            this.advancedDataGridView1.AllowUserToResizeRows = false;
             this.advancedDataGridView1.AutoGenerateColumns = false;
             this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.MintCream;
             this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
+            this.id,
             this.dateDataGridViewTextBoxColumn1,
             this.timeDataGridViewTextBoxColumn1,
             this.usertypeDataGridViewTextBoxColumn,
@@ -246,9 +185,177 @@
             this.advancedDataGridView1.Name = "advancedDataGridView1";
             this.advancedDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.advancedDataGridView1.RowHeadersVisible = false;
+            this.advancedDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.advancedDataGridView1.Size = new System.Drawing.Size(881, 585);
             this.advancedDataGridView1.SortStringChangedInvokeBeforeDatasourceUpdate = true;
             this.advancedDataGridView1.TabIndex = 10;
+            this.advancedDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.advancedDataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 22;
+            this.id.Name = "id";
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.id.Visible = false;
+            // 
+            // advancedDataGridViewSearchToolBar1
+            // 
+            this.advancedDataGridViewSearchToolBar1.AllowMerge = false;
+            this.advancedDataGridViewSearchToolBar1.AutoSize = false;
+            this.advancedDataGridViewSearchToolBar1.Dock = System.Windows.Forms.DockStyle.None;
+            this.advancedDataGridViewSearchToolBar1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.advancedDataGridViewSearchToolBar1.Location = new System.Drawing.Point(413, 42);
+            this.advancedDataGridViewSearchToolBar1.MaximumSize = new System.Drawing.Size(0, 27);
+            this.advancedDataGridViewSearchToolBar1.MinimumSize = new System.Drawing.Size(0, 27);
+            this.advancedDataGridViewSearchToolBar1.Name = "advancedDataGridViewSearchToolBar1";
+            this.advancedDataGridViewSearchToolBar1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.advancedDataGridViewSearchToolBar1.Size = new System.Drawing.Size(0, 27);
+            this.advancedDataGridViewSearchToolBar1.TabIndex = 11;
+            this.advancedDataGridViewSearchToolBar1.Text = "advancedDataGridViewSearchToolBar1";
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dateDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dateDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // timeDataGridViewTextBoxColumn1
+            // 
+            this.timeDataGridViewTextBoxColumn1.DataPropertyName = "time";
+            this.timeDataGridViewTextBoxColumn1.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.timeDataGridViewTextBoxColumn1.Name = "timeDataGridViewTextBoxColumn1";
+            this.timeDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.timeDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.timeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.timeDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // usertypeDataGridViewTextBoxColumn
+            // 
+            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "user_type";
+            this.usertypeDataGridViewTextBoxColumn.HeaderText = "User Type";
+            this.usertypeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
+            this.usertypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usertypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.usertypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.usertypeDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // timestateDataGridViewTextBoxColumn1
+            // 
+            this.timestateDataGridViewTextBoxColumn1.DataPropertyName = "time_state";
+            this.timestateDataGridViewTextBoxColumn1.HeaderText = "Time State";
+            this.timestateDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.timestateDataGridViewTextBoxColumn1.Name = "timestateDataGridViewTextBoxColumn1";
+            this.timestateDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.timestateDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.timestateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.timestateDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // honorificsDataGridViewTextBoxColumn1
+            // 
+            this.honorificsDataGridViewTextBoxColumn1.DataPropertyName = "honorifics";
+            this.honorificsDataGridViewTextBoxColumn1.HeaderText = "Honorifics";
+            this.honorificsDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.honorificsDataGridViewTextBoxColumn1.Name = "honorificsDataGridViewTextBoxColumn1";
+            this.honorificsDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.honorificsDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.honorificsDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.honorificsDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // firstnameDataGridViewTextBoxColumn1
+            // 
+            this.firstnameDataGridViewTextBoxColumn1.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn1.HeaderText = "First Name";
+            this.firstnameDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.firstnameDataGridViewTextBoxColumn1.Name = "firstnameDataGridViewTextBoxColumn1";
+            this.firstnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.firstnameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.firstnameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // middleinitialDataGridViewTextBoxColumn1
+            // 
+            this.middleinitialDataGridViewTextBoxColumn1.DataPropertyName = "middle_initial";
+            this.middleinitialDataGridViewTextBoxColumn1.HeaderText = "Middle Initial";
+            this.middleinitialDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.middleinitialDataGridViewTextBoxColumn1.Name = "middleinitialDataGridViewTextBoxColumn1";
+            this.middleinitialDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.middleinitialDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.middleinitialDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.middleinitialDataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // lastnameDataGridViewTextBoxColumn1
+            // 
+            this.lastnameDataGridViewTextBoxColumn1.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn1.HeaderText = "Last Name";
+            this.lastnameDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.lastnameDataGridViewTextBoxColumn1.Name = "lastnameDataGridViewTextBoxColumn1";
+            this.lastnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.lastnameDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.lastnameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // purposeDataGridViewTextBoxColumn1
+            // 
+            this.purposeDataGridViewTextBoxColumn1.DataPropertyName = "purpose";
+            this.purposeDataGridViewTextBoxColumn1.HeaderText = "Purpose";
+            this.purposeDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.purposeDataGridViewTextBoxColumn1.Name = "purposeDataGridViewTextBoxColumn1";
+            this.purposeDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.purposeDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.purposeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            this.emailDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.emailDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // affiliationDataGridViewTextBoxColumn1
+            // 
+            this.affiliationDataGridViewTextBoxColumn1.DataPropertyName = "affiliation";
+            this.affiliationDataGridViewTextBoxColumn1.HeaderText = "Affiliation";
+            this.affiliationDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.affiliationDataGridViewTextBoxColumn1.Name = "affiliationDataGridViewTextBoxColumn1";
+            this.affiliationDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.affiliationDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.affiliationDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // alldtBindingSource
+            // 
+            this.alldtBindingSource.DataMember = "alldt";
+            this.alldtBindingSource.DataSource = this.loginDataSet51;
+            // 
+            // loginDataSet51
+            // 
+            this.loginDataSet51.DataSetName = "loginDataSet5";
+            this.loginDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // logbookdtBindingSource3
+            // 
+            this.logbookdtBindingSource3.DataMember = "logbookdt";
+            this.logbookdtBindingSource3.DataSource = this.loginDataSet3;
+            // 
+            // loginDataSet3
+            // 
+            this.loginDataSet3.DataSetName = "loginDataSet3";
+            this.loginDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+           
+            // 
+            // logbookdtTableAdapter1
+            // 
+            this.logbookdtTableAdapter1.ClearBeforeFill = true;
             // 
             // loginDataSet5
             // 
@@ -260,129 +367,19 @@
             this.loginDataSet5BindingSource.DataSource = this.loginDataSet5;
             this.loginDataSet5BindingSource.Position = 0;
             // 
-            // loginDataSet51
-            // 
-            this.loginDataSet51.DataSetName = "loginDataSet5";
-            this.loginDataSet51.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alldtBindingSource
-            // 
-            this.alldtBindingSource.DataMember = "alldt";
-            this.alldtBindingSource.DataSource = this.loginDataSet51;
-            // 
             // alldtTableAdapter
             // 
             this.alldtTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn1
+            // loginDataSet52
             // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.loginDataSet52.DataSetName = "loginDataSet5";
+            this.loginDataSet52.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dateDataGridViewTextBoxColumn1
+            // alldtBindingSource1
             // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // timeDataGridViewTextBoxColumn1
-            // 
-            this.timeDataGridViewTextBoxColumn1.DataPropertyName = "time";
-            this.timeDataGridViewTextBoxColumn1.HeaderText = "time";
-            this.timeDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.timeDataGridViewTextBoxColumn1.Name = "timeDataGridViewTextBoxColumn1";
-            this.timeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // usertypeDataGridViewTextBoxColumn
-            // 
-            this.usertypeDataGridViewTextBoxColumn.DataPropertyName = "user_type";
-            this.usertypeDataGridViewTextBoxColumn.HeaderText = "user_type";
-            this.usertypeDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.usertypeDataGridViewTextBoxColumn.Name = "usertypeDataGridViewTextBoxColumn";
-            this.usertypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // timestateDataGridViewTextBoxColumn1
-            // 
-            this.timestateDataGridViewTextBoxColumn1.DataPropertyName = "time_state";
-            this.timestateDataGridViewTextBoxColumn1.HeaderText = "time_state";
-            this.timestateDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.timestateDataGridViewTextBoxColumn1.Name = "timestateDataGridViewTextBoxColumn1";
-            this.timestateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // honorificsDataGridViewTextBoxColumn1
-            // 
-            this.honorificsDataGridViewTextBoxColumn1.DataPropertyName = "honorifics";
-            this.honorificsDataGridViewTextBoxColumn1.HeaderText = "honorifics";
-            this.honorificsDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.honorificsDataGridViewTextBoxColumn1.Name = "honorificsDataGridViewTextBoxColumn1";
-            this.honorificsDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // firstnameDataGridViewTextBoxColumn1
-            // 
-            this.firstnameDataGridViewTextBoxColumn1.DataPropertyName = "first_name";
-            this.firstnameDataGridViewTextBoxColumn1.HeaderText = "first_name";
-            this.firstnameDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.firstnameDataGridViewTextBoxColumn1.Name = "firstnameDataGridViewTextBoxColumn1";
-            this.firstnameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // middleinitialDataGridViewTextBoxColumn1
-            // 
-            this.middleinitialDataGridViewTextBoxColumn1.DataPropertyName = "middle_initial";
-            this.middleinitialDataGridViewTextBoxColumn1.HeaderText = "middle_initial";
-            this.middleinitialDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.middleinitialDataGridViewTextBoxColumn1.Name = "middleinitialDataGridViewTextBoxColumn1";
-            this.middleinitialDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // lastnameDataGridViewTextBoxColumn1
-            // 
-            this.lastnameDataGridViewTextBoxColumn1.DataPropertyName = "last_name";
-            this.lastnameDataGridViewTextBoxColumn1.HeaderText = "last_name";
-            this.lastnameDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.lastnameDataGridViewTextBoxColumn1.Name = "lastnameDataGridViewTextBoxColumn1";
-            this.lastnameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // purposeDataGridViewTextBoxColumn1
-            // 
-            this.purposeDataGridViewTextBoxColumn1.DataPropertyName = "purpose";
-            this.purposeDataGridViewTextBoxColumn1.HeaderText = "purpose";
-            this.purposeDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.purposeDataGridViewTextBoxColumn1.Name = "purposeDataGridViewTextBoxColumn1";
-            this.purposeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            this.emailDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // affiliationDataGridViewTextBoxColumn1
-            // 
-            this.affiliationDataGridViewTextBoxColumn1.DataPropertyName = "affiliation";
-            this.affiliationDataGridViewTextBoxColumn1.HeaderText = "affiliation";
-            this.affiliationDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.affiliationDataGridViewTextBoxColumn1.Name = "affiliationDataGridViewTextBoxColumn1";
-            this.affiliationDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // advancedDataGridViewSearchToolBar1
-            // 
-            this.advancedDataGridViewSearchToolBar1.AllowMerge = false;
-            this.advancedDataGridViewSearchToolBar1.AutoSize = false;
-            this.advancedDataGridViewSearchToolBar1.Dock = System.Windows.Forms.DockStyle.None;
-            this.advancedDataGridViewSearchToolBar1.Location = new System.Drawing.Point(413, 42);
-            this.advancedDataGridViewSearchToolBar1.MaximumSize = new System.Drawing.Size(0, 27);
-            this.advancedDataGridViewSearchToolBar1.MinimumSize = new System.Drawing.Size(0, 27);
-            this.advancedDataGridViewSearchToolBar1.Name = "advancedDataGridViewSearchToolBar1";
-            this.advancedDataGridViewSearchToolBar1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.advancedDataGridViewSearchToolBar1.Size = new System.Drawing.Size(418, 27);
-            this.advancedDataGridViewSearchToolBar1.TabIndex = 11;
-            this.advancedDataGridViewSearchToolBar1.Text = "advancedDataGridViewSearchToolBar1";
+            this.alldtBindingSource1.DataMember = "alldt";
+            this.alldtBindingSource1.DataSource = this.loginDataSet52;
             // 
             // LogbookDataB
             // 
@@ -394,7 +391,6 @@
             this.Controls.Add(this.advancedDataGridViewSearchToolBar1);
             this.Controls.Add(this.advancedDataGridView1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Clearbutt);
             this.Controls.Add(this.Changebutt);
@@ -408,18 +404,16 @@
             this.Text = "LogBook";
             this.Load += new System.EventHandler(this.LogbookDataB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logbookdataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logbookdtBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginDataSet5BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginDataSet52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alldtBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,13 +425,9 @@
         private System.Windows.Forms.Button Changebutt;
         private System.Windows.Forms.Button Clearbutt;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.BindingSource logbookdataBindingSource;
-        private loginDataSet loginDataSet;
-        private loginDataSet loginDataSet1;
         private System.Windows.Forms.BindingSource logbookdtBindingSource;
-        private loginDataSetTableAdapters.logbookdtTableAdapter logbookdtTableAdapter;
         private System.Windows.Forms.BindingSource logbookdtBindingSource1;
         private System.Windows.Forms.BindingSource logbookdtBindingSource2;
         private loginDataSet3 loginDataSet3;
@@ -449,7 +439,10 @@
         private loginDataSet5 loginDataSet51;
         private System.Windows.Forms.BindingSource alldtBindingSource;
         private loginDataSet5TableAdapters.alldtTableAdapter alldtTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private Zuby.ADGV.AdvancedDataGridViewSearchToolBar advancedDataGridViewSearchToolBar1;
+        private loginDataSet5 loginDataSet52;
+        private System.Windows.Forms.BindingSource alldtBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn usertypeDataGridViewTextBoxColumn;
@@ -461,6 +454,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn purposeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn affiliationDataGridViewTextBoxColumn1;
-        private Zuby.ADGV.AdvancedDataGridViewSearchToolBar advancedDataGridViewSearchToolBar1;
     }
 }
